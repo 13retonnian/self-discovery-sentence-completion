@@ -1,0 +1,287 @@
+#SDSC_MainBackground
+{
+	background-color: rgb(183,218,172);
+}
+#SDSC_TitleBanner
+{
+	width: 70%;
+	margin: 0 auto;
+	display: block;
+}
+#HowToUseParagraph
+{
+	display: none;
+	color: rgb(21,88,47);
+	margin-left: auto;
+  margin-right: auto;
+	font-family: georgia;
+	font-size: 17px;
+	border: 10px double rgb(21,88,47);
+	max-width: 70%;
+	font-weight: bold;
+	background-color: rgba(255,255,255,0.7);
+	padding-top: 0px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 0px;
+	text-align: center;
+}
+.Stem
+{
+	font-weight: bold;
+	font-family: georgia;	
+	color: rgb(21,88,47);
+	display: none;
+	font-size: 44px;
+	text-align: center;
+	margin: 10px auto;
+}
+.Header
+{
+	font-weight: bold;
+	font-family: georgia;
+	margin-left: auto;
+  margin-right: auto;
+	color: rgb(21,88,47);
+	display: none;
+	font-size: 20px;
+	text-align: center;
+	border: 10px double rgb(21,88,47);
+	max-width: 70%;
+	font-weight: bold;
+	background-color: rgba(255,255,255,0.7);
+	padding-top: 10px;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-bottom: 0px;
+	line-height: 26px;	
+}
+.button 
+{
+  display: block;
+  margin: 10px auto;
+  height: 150px;
+  width: 400px;
+  font-size: 48px;
+  background-color: rgb(21,88,47);
+  font-family: georgia;
+  color: rgb(183,218,172);
+  border-radius: 5px;  
+	border: line;
+	border-color: rgb(21,88,47);
+	max-width: 100%;
+	
+}
+.button:hover
+{
+  background-color: rgb(183,218,172);
+  color: rgb(21,88,47);
+}
+.flex-container 
+{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;	
+	justify-content: space-between;
+} 
+.how-button 
+{
+	margin-bottom: 50px;
+}
+.initial-display-none
+{
+	display: none;
+}
+.results-header
+{
+	font-size: 30px;	
+	font-weight: bold;	
+	color: rgb(21,88,47);
+	display: none;
+	font-family: georgia;
+	text-align: center;
+	margin: 0 auto;
+}
+.input-box
+{
+	display: none;
+	margin: 0 auto;
+	width: 800px;
+	height: 400px;	
+	background-color: rgba(255,255,255,0.5);
+	font-size: 30px;	
+	border: 10px double rgb(21,88,47);
+	max-width: 70%;
+	font-weight: bold;	
+	padding-top: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 0px;	
+	font-family: georgia;
+	text-align: left;
+	word-wrap: break-word;
+	color: rgb(21,88,47);
+}
+#FrontPageHeader
+{
+	font-size: 30px;	
+	font-weight: bold;	
+	color: rgb(21,88,47);
+	display: block;
+	font-family: georgia;
+	text-align: center;
+}
+.next-button
+{
+	display: none;
+}
+.quick-instructions
+{
+	font-size: 20px;	
+	font-weight: bold;	
+	color: rgb(21,88,47);
+	display: none;
+	font-family: georgia;
+	text-align: center;
+	margin: 0 auto;
+}
+.timer
+{
+	margin: 0 auto;
+	font-size: 60px;	
+	font-weight: bold;	
+	color: rgb(21,88,47);
+	display: none;	
+	font-family: 'Times New Roman', Times, serif;
+	text-align: center;	
+}
+.results
+{
+	font-weight: bold;
+	font-family: georgia;
+	margin-left: auto;
+  margin-right: auto;
+	color: rgb(21,88,47);
+	display: none;
+	font-size: 22px;
+	text-align: center;
+	border: 10px double rgb(21,88,47);
+	max-width: 70%;
+	font-weight: bold;
+	background-color: rgba(255,255,255,0.7);
+	padding-top: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 0px;	
+}
+#BretonnianWebDevelopmentLink
+{	
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 150px;
+}
+.saved-indicator
+{
+	font-weight: bold;
+	font-family: georgia;
+	margin-left: auto;
+  margin-right: auto;
+	color: rgb(21,88,47);
+	display: none;
+	font-size: 22px;
+	text-align: center;
+	border: 10px line rgb(21,88,47);
+	max-width: 350px;
+	font-weight: bold;
+	background-color: rgba(255,255,255,0.5);
+	padding-top: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 10px;	
+	position: absolute;
+	left: calc(50% - 175px);
+	top: calc(50% - 20px);
+}
+.topics
+{
+	/* max-width: 70%; */
+	/* margin: 0 auto; */
+}
+.pause-button 
+{
+	width: 80px;
+	height: 30px;
+	font-size: 20px;
+	display: none;
+}
+section 
+{
+	margin: 0;
+}
+
+@media only screen and (max-width: 800px)
+{		
+	#SDSC_TitleBanner
+	{
+		width: 100%;
+	}
+	#HowToUseParagraph
+	{
+		max-width: 100%;
+		font-size: 16px;
+	}
+	.Header 
+	{
+		max-width: 100%;
+		font-size: 16px;
+	}
+	.input-box
+	{
+		max-width: 90%;
+		font-size: 16px;
+		height: 200px;
+	}
+	.saved-indicator
+	{
+		font-size: 16px;
+		top: calc(50% - 120px);
+		left: calc(50% - 125px);
+		width: 250px;		
+		border: 2px line rgb(21,88,47);
+	}
+	.results
+	{
+		max-width: 100%;
+		font-size: 16px;
+	}
+	#BretonnianWebDevelopmentLink
+	{
+		width: 15%;
+	}
+	.Stem 
+	{
+		font-size: 24px;
+	}
+	.quick-instructions 
+	{
+		font-size: 16px;
+	}
+	.timer
+	{
+		font-size: 50px;
+	}
+	.button
+	{
+		font-size: 48px;
+	}
+	.topics
+	{
+		
+	}
+	.pause-button
+	{
+		font-size: 20px;
+	}
+}
+
