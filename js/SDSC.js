@@ -20,8 +20,13 @@ const painButton = document.querySelector(".pain-button");
 const angerButton = document.querySelector(".anger-button");
 const fearButton = document.querySelector(".fear-button");
 const envyButton = document.querySelector(".envy-button");
-//
+// Positive Feelings
 const positiveButton = document.querySelector(".positive-button");
+const happinessButton = document.querySelector(".happiness-button");
+const loveButton = document.querySelector(".love-button");
+const feelingLovedButton = document.querySelector(".feeling-loved-button");
+const excitementButton = document.querySelector(".excitement-button");
+//
 const sexualityButton = document.querySelector(".sexuality-button");
 const selfEsteemButton = document.querySelector(".self-esteem-button");
 const sageSelfButton = document.querySelector(".sage-self-button");
@@ -131,17 +136,25 @@ You have come a long way. <br><br>
 You have a long way to go. <br><br>
 Rest, review and meditate on what you have written and contemplate on what new possibilities might be available to you with regard to the understanding and handling of emotions. <br><br>`;
 // Positive
-const POSITIVE_HEADER = `The practice of living purposefully is the fifth pillar of self-esteem. <br><br>
-To live purposefully is to use our powers for the attainment of goals we have selected. <br><br>
-It is our goals that lead us forward, that call on the exercise of our faculties, that energize our existence. <br><br>
-To live purposefully is to live productively which is a necessity of making ourselves competent to life. <br><br>
-To live purposefully is to be concerned with these questions: <br><br>
-What am I trying to achieve? <br><br>
-How am I trying to achieve it? <br><br>
-Why do I think these means are appropriate? <br><br>
-Does the feedback from the environment convey that I am succeeding or failing? <br><br>
-Is there new information that I need to consider? <br><br>
-Do I need to make adjustments in my course, strategy or practices? <br><br>`;
+const POSITIVE_HEADER = `When we think of "unwanted" emotions, or emotions we seek to avoid or suppress, the natural inclination is to think in terms of "negatives": pain, fear, rage, and the like. <br><br>
+But the truth is that often it is positive emotional experience that we seek to suppress: excitement, love, sexuality. <br><br>
+`;
+const HAPPINESS_HEADER = `Such emotions may threaten our equilibrium or our self-image. <br><br>
+When we are afraid of intense feelings of <i>any</i> kind, it is often the very best within us that we try to bury. <br><br>`;
+const LOVE_HEADER = `The tragedy of so many people's lives is that they are more concerned with avoiding hurt (or rejection) than with experiencing joy (or love). <br><br>
+The avoidance of the negative matters more to them than the attainment of the positive. <br><br>
+But of course such a policy makes pain and disappointment inevitable; they become sabateurs of their own happiness. <br><br>
+Might any of this apply to you? <br><br>
+Please reread your endings for this section. <br><br>`;
+const FEELING_LOVED_HEADER = `What have you learned about your positive feelings? <br><br>
+About your ability to love? <br><br>
+About your ability to express the deepest, best part of who you are? <br><br>
+Are you surprised by any of your responses? <br><br>
+If so, take this opportunity to explore any ambivalence you have discovered toward your own positive feelings. <br><br>`;
+const EXCITEMENT_HEADER = `"Excitement" can be about life, about a project, about another person, about yourself. <br><br>
+The truth is that nothing is more precious or valuable than our own ability to experience excitement, since this ultimately means our ability to respond positively to the possibilities of life. <br><br>
+No trait is more beautiful in a child - or more admirable in an old person. <br><br>
+Our ability to experience excitement should be our most protected and nurtured possession. <br><br>`;
 const SEXUALITY_HEADER = `The practice of personal integrity is the sixth pillar of self-esteem. <br><br>
 Integrity is the integration of ideals, convictions, standards, beliefs and behavior. <br><br>
 When our behavior is congruent with our professed values, when ideals and practice match, we have integrity. <br><br>
@@ -341,12 +354,62 @@ const ENVY_STEM_6 = "As I learn to take responsibility for my feelings...";
 // - Love
 // - Feeling Loved
 // - Excitement
-const POSITIVE_STEM_1 = "Living purposefully to me means...";
-const POSITIVE_STEM_2 = "If I bring 5 percent more purposefulness to my life today...";
-const POSITIVE_STEM_3 = "If I am 5 percent more purposeful in my communications...";
-const POSITIVE_STEM_4 = "If I bring 5 percent more purposefulness to my relationships...";
-const POSITIVE_STEM_5 = "If I am 5 percent more purposeful about my deepest yearnings...";
-const POSITIVE_STEM_6 = "If I took more responsibility for fulfilling my wants...";
+const HAPPINESS_STEM_A_1 = `I can remember feeling happy when...`;
+const HAPPINESS_STEM_A_2 = `Sometimes, today, I feel happy when...`;
+const HAPPINESS_STEM_A_3 = `Sometimes, when I'm happy, I...`;
+const HAPPINESS_STEM_A_4 = `Sometimes I try to to hide my happiness by...`;
+const HAPPINESS_STEM_A_5 = `One of the disguised ways my happiness comes out is...`;
+const HAPPINESS_STEM_A_6 = `If I were more accepting of my feelings of happiness..`;
+// Happiness B
+const HAPPINESS_STEM_B_1 = `If I were willing to let people see my joy...`;
+const HAPPINESS_STEM_B_2 = `Sometimes, when I was younger, the frightening thing about letting people see my joy was...`;
+const HAPPINESS_STEM_B_3 = `Sometimes, today, the frightening thing about letting people see my joy is...`;
+const HAPPINESS_STEM_B_4 = `If I were to live more fully in the present...`;
+const HAPPINESS_STEM_B_5 = `If I were to breathe deeply and feel my joy without restraint...`;
+const HAPPINESS_STEM_B_6 = `I am becoming aware...`;
+// Love A
+const LOVE_STEM_A_1 = `I can remember feeling love when...`;
+const LOVE_STEM_A_2 = `Sometimes, today, I feel love when...`;
+const LOVE_STEM_A_3 = `Sometimes, when I feel love, I...`;
+const LOVE_STEM_A_4 = `Sometimes, I try to hide my love by...`;
+const LOVE_STEM_A_5 = `One of the disguised ways my love comes out is...`;
+const LOVE_STEM_A_6 = `If I were more accepting of my feelings of love...`;
+// Love B
+const LOVE_STEM_B_1 = `If I were willing to express my love fully...`;
+const LOVE_STEM_B_2 = `Sometimes, when I was younger, the frightening thing about fully expressing my love is...`;
+const LOVE_STEM_B_3 = `If I were willing to breathe deeply and feel my love fully...`;
+const LOVE_STEM_B_4 = `I am beginning to suspect...`;
+const LOVE_STEM_B_5 = `Right now it seems obvious that...`;
+const LOVE_STEM_B_6 = `If I allow myself to understand what I have been writing...`;
+// Feeling Loved A
+const FEELING_LOVED_STEM_A_1 = `I can remember feeling loved when...`;
+const FEELING_LOVED_STEM_A_2 = `Sometimes, today, I feel loved when...`;
+const FEELING_LOVED_STEM_A_3 = `Sometimes, when I feel loved, I...`;
+const FEELING_LOVED_STEM_A_4 = `Sometimes I try to deny feeling loved by...`;
+const FEELING_LOVED_STEM_A_5 = `If I were more accepting when I feel loved...`;
+const FEELING_LOVED_STEM_A_6 = `If I were willing to let others see that I feel loved...`;
+// Feeling loved B
+const FEELING_LOVED_STEM_B_1 = `Sometimes the frightening thing about admitting I feel loved is...`;
+const FEELING_LOVED_STEM_B_2 = `If I were willing to breathe deeply and let myself feel loved...`;
+const FEELING_LOVED_STEM_B_3 = `I am becoming aware...`;
+const FEELING_LOVED_STEM_B_4 = `I am beginning to suspect...`;
+const FEELING_LOVED_STEM_B_5 = `I people knew how much love I have locked up inside of me...`;
+const FEELING_LOVED_STEM_B_6 = `If I allow myself to understand what I have been writing...`;
+// Excitement A
+const EXCITEMENT_STEM_A_1 = `Sometimes I feel excited when...`;
+const EXCITEMENT_STEM_A_2 = `Sometimes, when I feel excited, I...`;
+const EXCITEMENT_STEM_A_3 = `Sometimes I try to hide my excitement by...`;
+const EXCITEMENT_STEM_A_4 = `One of the disguised ways my excitement comes out is...`;
+const EXCITEMENT_STEM_A_5 = `If I were more accepting of my feelings of excitement...`;
+const EXCITEMENT_STEM_A_6 = `If I were willing to let people see my excitement...`;
+// Excitement B
+const EXCITEMENT_STEM_B_1 = `Sometimes, when I was younger, the frightening thing about showing my excitement is...`;
+const EXCITEMENT_STEM_B_2 = `Sometimes, today, the frightening thing about showing my excitement is...`;
+const EXCITEMENT_STEM_B_3 = `If I were willing to breathe deeply and fully experience my excitement...`;
+const EXCITEMENT_STEM_B_4 = `I am becoming aware...`;
+const EXCITEMENT_STEM_B_5 = `As more and more understanding happens at a subconscious level...`;
+const EXCITEMENT_STEM_B_6 = `If, indeed, I am learning more than I yet recognize...`;
+
 // SEXUALITY 
 // - Sexuality
 // - Parental Influences
@@ -528,13 +591,44 @@ const initializeEnvy = function() {
 	initializeMoreStartPage();
 	loadStems(ENVY_STEM_1, ENVY_STEM_2, ENVY_STEM_3, ENVY_STEM_4, ENVY_STEM_5, ENVY_STEM_6);
 }
-//
+// Positive Emotions
 const initializePositive = function() {
 	topicState = "positive";
-	loadStems(POSITIVE_STEM_1, POSITIVE_STEM_2, POSITIVE_STEM_3, POSITIVE_STEM_4, POSITIVE_STEM_5, POSITIVE_STEM_6);
+	clearPage();
+	homeButton.style.display = "block";
+	headerHTML.style.display = "block";
+	happinessButton.style.display = "block";
+	loveButton.style.display = "block";
+	feelingLovedButton.style.display = "block";
+	excitementButton.style.display = "block";
 	headerHTML.innerHTML = POSITIVE_HEADER;
-	initializeMoreStartPage();
 }
+const initializeHappiness = function() {
+	topicState = "happiness";
+	clearPage();
+	initializeTwoStartButtons();
+	headerHTML.innerHTML = HAPPINESS_HEADER;
+}
+const initializeLove = function(){
+	topicState = "love";
+	clearPage();
+	initializeTwoStartButtons();
+	headerHTML.innerHTML = LOVE_HEADER;
+}
+const initializeFeelingLoved = function() {
+	topicState = "feeling-loved";
+	clearPage();
+	initializeTwoStartButtons();
+	headerHTML.innerHTML = FEELING_LOVED_HEADER;
+}
+const initializeExcitement = function() {
+	topicState = "excitement";
+	clearPage();
+	initializeTwoStartButtons();
+	headerHTML.innerHTML = EXCITEMENT_HEADER;
+}
+
+
 const initializeSexuality = function() {
 	topicState = "sexuality";
 	loadStems(SEXUALITY_STEM_1, SEXUALITY_STEM_2, SEXUALITY_STEM_3, SEXUALITY_STEM_4, SEXUALITY_STEM_5, SEXUALITY_STEM_6);
@@ -584,6 +678,10 @@ const clearPage = function() {
 	angerButton.style.display = "none";
 	fearButton.style.display = "none";
 	envyButton.style.display = "none";
+	happinessButton.style.display = "none";
+	loveButton.style.display = "none";
+	feelingLovedButton.style.display = "none";
+	excitementButton.style.display = "none";
 }
 const displayHowTo = function() {
 	howParagraph.style.display = "block";
@@ -648,6 +746,18 @@ const startExerciseA = function() {
 	else if(topicState === "fear") {
 		loadStems(FEAR_STEM_A_1, FEAR_STEM_A_2, FEAR_STEM_A_3, FEAR_STEM_A_4, FEAR_STEM_A_5, FEAR_STEM_A_6);
 	}		
+	else if(topicState === "happiness") {
+		loadStems(HAPPINESS_STEM_A_1, HAPPINESS_STEM_A_2, HAPPINESS_STEM_A_3, HAPPINESS_STEM_A_4, HAPPINESS_STEM_A_5, HAPPINESS_STEM_A_6);
+	}
+	else if(topicState === "love") {
+		loadStems(LOVE_STEM_A_1, LOVE_STEM_A_2, LOVE_STEM_A_3, LOVE_STEM_A_4, LOVE_STEM_A_5, LOVE_STEM_A_6);
+	}
+	else if(topicState === "feeling-loved") {
+		loadStems(FEELING_LOVED_STEM_A_1, FEAR_STEM_A_2, FEELING_LOVED_STEM_A_3, FEELING_LOVED_STEM_A_4, FEELING_LOVED_STEM_A_5, FEELING_LOVED_STEM_A_6);
+	}
+	else if(topicState === "excitement") {
+		loadStems(EXCITEMENT_STEM_A_1, EXCITEMENT_STEM_A_2, EXCITEMENT_STEM_A_3, EXCITEMENT_STEM_A_4, EXCITEMENT_STEM_A_5, EXCITEMENT_STEM_A_6);
+	}
 	startExercise();
 }
 const startExerciseB = function() {	
@@ -664,14 +774,26 @@ const startExerciseB = function() {
 		loadStems(TEENAGE_STEM_B_1, TEENAGE_STEM_B_2, TEENAGE_STEM_B_3, TEENAGE_STEM_B_4, TEENAGE_STEM_B_5, TEENAGE_STEM_B_6);
 	}
 	else if(topicState === "pain") {
-		loadStems(PAIN_STEM_A_1, PAIN_STEM_A_2, PAIN_STEM_A_3, PAIN_STEM_A_4, PAIN_STEM_A_5, PAIN_STEM_A_6);
+		loadStems(PAIN_STEM_B_1, PAIN_STEM_B_2, PAIN_STEM_B_3, PAIN_STEM_B_4, PAIN_STEM_B_5, PAIN_STEM_B_6);
 	}
 	else if(topicState === "anger") {
-		loadStems(ANGER_STEM_A_1, ANGER_STEM_A_2, ANGER_STEM_A_3, ANGER_STEM_A_4, ANGER_STEM_A_5, ANGER_STEM_A_6);
+		loadStems(ANGER_STEM_B_1, ANGER_STEM_B_2, ANGER_STEM_B_3, ANGER_STEM_B_4, ANGER_STEM_B_5, ANGER_STEM_B_6);
 	}
 	else if(topicState === "fear") {
-		loadStems(FEAR_STEM_A_1, FEAR_STEM_A_2, FEAR_STEM_A_3, FEAR_STEM_A_4, FEAR_STEM_A_5, FEAR_STEM_A_6);
+		loadStems(FEAR_STEM_B_1, FEAR_STEM_B_2, FEAR_STEM_B_3, FEAR_STEM_B_4, FEAR_STEM_B_5, FEAR_STEM_B_6);
 	}	
+	else if(topicState === "happiness") {
+		loadStems(HAPPINESS_STEM_B_1, HAPPINESS_STEM_B_2, HAPPINESS_STEM_B_3, HAPPINESS_STEM_B_4, HAPPINESS_STEM_B_5, HAPPINESS_STEM_B_6);
+	}
+	else if(topicState === "love") {
+		loadStems(LOVE_STEM_B_1, LOVE_STEM_B_2, LOVE_STEM_B_3, LOVE_STEM_B_4, LOVE_STEM_B_5, LOVE_STEM_B_6);
+	}
+	else if(topicState === "feeling-loved") {
+		loadStems(FEELING_LOVED_STEM_B_1, FEAR_STEM_B_2, FEELING_LOVED_STEM_B_3, FEELING_LOVED_STEM_B_4, FEELING_LOVED_STEM_B_5, FEELING_LOVED_STEM_B_6);
+	}
+	else if(topicState === "excitement") {
+		loadStems(EXCITEMENT_STEM_B_1, EXCITEMENT_STEM_B_2, EXCITEMENT_STEM_B_3, EXCITEMENT_STEM_B_4, EXCITEMENT_STEM_B_5, EXCITEMENT_STEM_B_6);
+	}
 	startExercise();
 }
 const startExerciseC = function() {
@@ -854,8 +976,13 @@ painButton.addEventListener("click", initializePain);
 angerButton.addEventListener("click", initializeAnger);
 fearButton.addEventListener("click", initializeFear);
 envyButton.addEventListener("click", initializeEnvy);
-
+// Positive Feelings
 positiveButton.addEventListener("click", initializePositive);
+happinessButton.addEventListener("click", initializeHappiness);
+loveButton.addEventListener("click", initializeLove);
+feelingLovedButton.addEventListener("click", initializeFeelingLoved);
+excitementButton.addEventListener("click", initializeExcitement);
+//
 sexualityButton.addEventListener("click", initializeSexuality);
 selfEsteemButton.addEventListener("click", initializeSelfEsteem);
 sageSelfButton.addEventListener("click", initializeSageSelf);
