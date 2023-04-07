@@ -1,5 +1,7 @@
 # Self Discovery Sentence Completion (Unfinished)
-- completed Intro up to Negative feelings, about 50% done.
+
+- completed Intro up to Positive feelings, about 60% done.
+
 # How To Use
 
 To use Self-Discovery Sentence Completion select a topic then complete the sentences that appear.
