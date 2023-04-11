@@ -1,6 +1,6 @@
 # Self Discovery Sentence Completion (Unfinished)
 
-- completed Intro up to Positive feelings, about 60% done.
+- completed Intro up to exploring sexuality, about 75% done.
 
 # How To Use
 
@@ -15,6 +15,8 @@ The purpose of this exercise is to expose important information in your subconsc
 Once this information is in your conscious mind you can begin to understand it and process it.
 
 This will bring you better self knowledge and ultimately better self-esteem.
+
+These exercises are completely confidential and your completions cannot be seen by anyone but you and whoever you show them to.
 
 At the end of the exercise you will be able to review your answers and save them for future examination.
 

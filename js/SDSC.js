@@ -1,4 +1,4 @@
-//Programmed by Christopher Barber January 24th 2022
+//Programmed by Christopher Barber January 24th 2022 - April 11th 2023
 //declare buttons
 const howToUseButton = document.querySelector(".how-button");
 const introductoryButton = document.querySelector(".introductory-button");
@@ -26,8 +26,13 @@ const happinessButton = document.querySelector(".happiness-button");
 const loveButton = document.querySelector(".love-button");
 const feelingLovedButton = document.querySelector(".feeling-loved-button");
 const excitementButton = document.querySelector(".excitement-button");
-//
+// Sexuality
+const exploringSexualityButton = document.querySelector(".exploring-sexuality-button");
 const sexualityButton = document.querySelector(".sexuality-button");
+const parentalInfluencesButton = document.querySelector(".parental-influences-button");
+const oppositeSexButton = document.querySelector(".opposite-sex-button");
+const sexAndSpiritButton = document.querySelector(".sex-and-spirit-button");
+//
 const selfEsteemButton = document.querySelector(".self-esteem-button");
 const sageSelfButton = document.querySelector(".sage-self-button");
 const nextButton = document.querySelector(".next-button");
@@ -36,6 +41,8 @@ const startButton = document.querySelector(".start-button");
 const startButtonA = document.querySelector(".start-button-a");
 const startButtonB = document.querySelector(".start-button-b");
 const startButtonC = document.querySelector(".start-button-c");
+const startButtonD = document.querySelector(".start-button-d");
+const startButtonE = document.querySelector(".start-button-e");
 const pauseButton = document.querySelector(".pause-button");
 //other
 const howParagraph = document.querySelector("#HowToUseParagraph");
@@ -155,18 +162,20 @@ const EXCITEMENT_HEADER = `"Excitement" can be about life, about a project, abou
 The truth is that nothing is more precious or valuable than our own ability to experience excitement, since this ultimately means our ability to respond positively to the possibilities of life. <br><br>
 No trait is more beautiful in a child - or more admirable in an old person. <br><br>
 Our ability to experience excitement should be our most protected and nurtured possession. <br><br>`;
-const SEXUALITY_HEADER = `The practice of personal integrity is the sixth pillar of self-esteem. <br><br>
-Integrity is the integration of ideals, convictions, standards, beliefs and behavior. <br><br>
-When our behavior is congruent with our professed values, when ideals and practice match, we have integrity. <br><br>
-When we behave in ways that conflict with our judgement of what is appropriate we lose face in our eyes. <br><br>
-Personal integrity entails questions such as: <br><br>
-"Am I honest, reliable and trustworthy?" <br><br>
-"Do I keep my promises?" <br><br>
-"Do I do the things I say I admire and do I avoid the things I say I deplore?" <br><br>
-"Am I fair and just in my dealings with others?" <br><br>
-Most of the issues of integrity we face are not big issues but small ones, yet the accumulated weight of our choices has an impact on our sense of self. <br><br>
-Once we see that living up to our standards appears to be leading us towards self-destruction, the time has come to question our standards. <br><br>
-Lies do not work. <br><br>`;
+// Sexuality
+const EXPLORING_SEXUALITY_HEADER = `Our sexuality is one of the most important things about us. <br><br>
+By sexuality I mean not only our ability to experience sexual excitement, but how we feel about our sexual excitement, how we feel about the act of sex itself, and how we express ourselves in the act of sex. <br><br>
+Who we are attracted to? What characteristics "turn us on"? <br><br>`;
+const SEXUALITY_HEADER = `Do we feel pride or shame in our responses? <br><br>
+Do we experience sex as an expression of our mind, values, and spirit - or do we see sex as belonging to some "lower order" of reality, unrelated to our mind or convictions? <br><br>`;
+const PARENTAL_INFLUENCES_HEADER = `Long before we were influenced by movies or books or clandestine copies of dirty magazines, we already possess a notion of our own sexuality that reflects the attitudes of the sexually mature people closest to us. <br><br>
+In most cases, these are our parents.`;
+const OPPOSITE_SEX_HEADER = `Often we do violence to who we are because of misguided notions of "masculinity" and "femininity." <br><br>
+We attempt to disown whatever does not fit our image of what is appropriate. <br><br>
+Thus, men often disown tenderness, sensuality, their ability to be nurturing, just as women often disown strength, assertiveness, sexuality, their ability to be self-reliant. <br><br>`;
+const SEX_AND_SPIRIT_HEADER = `What if it is self-delusion to imagine that our sex life bears little or no relation to the rest of who and what we are? <br><br>
+And if we do learn to see sex as an act of self-expression, what follows? <br><br>`;
+//
 const SELF_ESTEEM_HEADER = "";
 const SAGE_SELF_HEADER = "";
 // Sentence Stems
@@ -409,18 +418,66 @@ const EXCITEMENT_STEM_B_3 = `If I were willing to breathe deeply and fully exper
 const EXCITEMENT_STEM_B_4 = `I am becoming aware...`;
 const EXCITEMENT_STEM_B_5 = `As more and more understanding happens at a subconscious level...`;
 const EXCITEMENT_STEM_B_6 = `If, indeed, I am learning more than I yet recognize...`;
-
 // SEXUALITY 
 // - Sexuality
 // - Parental Influences
 // - Opposie Sex
 // - Sex and Spirit
-const SEXUALITY_STEM_1 = "Integrity to me means...";
-const SEXUALITY_STEM_2 = "If I bring 5 percent more integrity into my life...";
-const SEXUALITY_STEM_3 = "If I think about the areas where I find it difficult to practice full integrity...";
-const SEXUALITY_STEM_4 = "If I bring a higher level of consciousness to the areas where I find it difficult to practice full integrity...";
-const SEXUALITY_STEM_5 = "If I remain loyal to the values that I truly believe are right...";
-const SEXUALITY_STEM_6 = "If I treat my self-esteem as a high priority...";
+const SEXUALITY_STEM_1 = "Sometimes I feel sexually inspired (\"turned on\") when...";
+const SEXUALITY_STEM_2 = "Sometimes, when I'm feeling sexual, I...";
+const SEXUALITY_STEM_3 = "One of the ways I sometimes hide my sexual excitement is...";
+const SEXUALITY_STEM_4 = "One of the ways my sexual excitement comes out is...";
+const SEXUALITY_STEM_5 = "If I were fully comfortable with my sexuality...";
+const SEXUALITY_STEM_6 = "If I were fully honest with myself about my sexual feelings...";
+// parental influences A
+const PARENTAL_INFLUENCES_STEM_A_1 = `A better way to deal with my sexuality might be to...`;
+const PARENTAL_INFLUENCES_STEM_A_2 = `As a child, it seemed to me that Mother gave me the feeling my body was...`;
+const PARENTAL_INFLUENCES_STEM_A_3 = `As a teenager, it seemed to me that Mother gave me the feeling my body was...`;
+const PARENTAL_INFLUENCES_STEM_A_4 = `When I was growing up, Mother gave me the feeling that sex was...`;
+const PARENTAL_INFLUENCES_STEM_A_5 = `Mother gave me the feeling that women are...`;
+const PARENTAL_INFLUENCES_STEM_A_6 = `Mother gave me the feeling that men are...`;
+// parental influences B
+const PARENTAL_INFLUENCES_STEM_B_1 = `Mother gave me the feeling that love is...`;
+const PARENTAL_INFLUENCES_STEM_B_2 = `As a child, it seemed to me that Father gave me the feeling my body was...`;
+const PARENTAL_INFLUENCES_STEM_B_3 = `As a teenager, it seemed to me that Father gave me the feeling my body was...`;
+const PARENTAL_INFLUENCES_STEM_B_4 = `When I was growing up, Father gave me the feeling that sex was...`;
+const PARENTAL_INFLUENCES_STEM_B_5 = `Father gave me the feeling that women are...`;
+const PARENTAL_INFLUENCES_STEM_B_6 = `Father gave me the feeling that men are...`;
+// parental influences C
+const PARENTAL_INFLUENCES_STEM_C_1 = `Father gave me the feeling that love is...`;
+const PARENTAL_INFLUENCES_STEM_C_2 = `I am becoming aware...`;
+const PARENTAL_INFLUENCES_STEM_C_3 = `If I were completely free of Mother's sexual influence...`;
+const PARENTAL_INFLUENCES_STEM_C_4 = `If I were completely free of Father's sexual influence...`;
+const PARENTAL_INFLUENCES_STEM_C_5 = `If I listen to my own inner voice rather than the voice of Mother or Father...`;
+const PARENTAL_INFLUENCES_STEM_C_6 = `If I allow myself to see what I see and know what I know...`;
+// parental influences D
+const PARENTAL_INFLUENCES_STEM_D_1 = `If no one has the right to dictate my sexuality...`;
+const PARENTAL_INFLUENCES_STEM_D_2 = `If I were willing to take full responsibility for my own sexuality...`;
+const PARENTAL_INFLUENCES_STEM_D_3 = `If I were completely free of Mother's sexual influence...`;
+const PARENTAL_INFLUENCES_STEM_D_4 = `If I were completely free of Father's sexual influence...`;
+const PARENTAL_INFLUENCES_STEM_D_5 = `If I listen to my own inner voice rather than the voice of Mother or Father...`;
+const PARENTAL_INFLUENCES_STEM_D_6 = `If I allow myself to see what I see and know what I know...`;
+// parental influences E
+const PARENTAL_INFLUENCES_STEM_E_1 = `If no one has the right to dictate my sexuality...`;
+const PARENTAL_INFLUENCES_STEM_E_2 = `If I were willing to take full responsibility for my own sexuality...`;
+const PARENTAL_INFLUENCES_STEM_E_3 = `The frightening thing about taking full responsibility for my sexuality is...`;
+const PARENTAL_INFLUENCES_STEM_E_4 = `The liberating thing about taking full responsibility for my sexuality is...`;
+const PARENTAL_INFLUENCES_STEM_E_5 = `If I allow myself to understand what I have been writing...`;
+const PARENTAL_INFLUENCES_STEM_E_6 = `Right now it seems obvious that...`;
+// opposite sex
+const OPPOSITE_SEX_STEM_1 = `Woman to me is...`;
+const OPPOSITE_SEX_STEM_2 = `Man to me is...`;
+const OPPOSITE_SEX_STEM_3 = `The hard thing about being a woman is...`;
+const OPPOSITE_SEX_STEM_4 = `The hard thing about being a man is...`;
+const OPPOSITE_SEX_STEM_5 = `If I didn't have to be concerned about being masculine...`;
+const OPPOSITE_SEX_STEM_6 = `If I didn't have to be concerned about being feminine...`;
+// sex and spirit
+const SEX_AND_SPIRIT_STEM_1 = `If there is a respect in which my sexuality expresses my deepest self...`;
+const SEX_AND_SPIRIT_STEM_2 = `If I take full responsibility for my sexual choices and actions...`;
+const SEX_AND_SPIRIT_STEM_3 = `If I look at my sexual partner and tell myself, "He/she is my choice"...`;
+const SEX_AND_SPIRIT_STEM_4 = `I am becoming aware...`;
+const SEX_AND_SPIRIT_STEM_5 = `The difficult thing about looking clearly at this issue is...`;
+const SEX_AND_SPIRIT_STEM_6 = `The liberating thing about looking at this issue clearly might be...`;
 // Self-Esteem
 // - Early Messages
 // - Behaviors
@@ -483,6 +540,15 @@ const initializeThreeStartButtons = function() {
 	startButtonB.style.display = "block";
 	startButtonC.style.display = "block";
 }
+const initializeFiveStartButtons = function() {
+	headerHTML.style.display = "block";
+	homeButton.style.display = "block";
+	startButtonA.style.display = "block";
+	startButtonB.style.display = "block";
+	startButtonC.style.display = "block";
+	startButtonD.style.display = "block";
+	startButtonE.style.display = "block";
+}
 const initializeIntroductory = function() {	
 	topicState = "introductory";
 	loadStems(INTRODUCTORY_STEM_1, INTRODUCTORY_STEM_2, INTRODUCTORY_STEM_3, INTRODUCTORY_STEM_4, INTRODUCTORY_STEM_5, INTRODUCTORY_STEM_6);
@@ -526,7 +592,6 @@ const initializeAnotherPerspective = function() {
 	headerHTML.innerHTML = ANOTHER_PERSPECTIVE;
 	initializeMoreStartPage();
 }
-
 // Child - Teenage Self
 const initializeChildTeenage = function() {
 	topicState = "child-teenage";
@@ -627,14 +692,47 @@ const initializeExcitement = function() {
 	initializeTwoStartButtons();
 	headerHTML.innerHTML = EXCITEMENT_HEADER;
 }
-
-
+// Sexuality
+const initializeExploringSexuality = function() {
+	topicState = "experiencing-sexuality";
+	clearPage();
+	homeButton.style.display = "block";
+	headerHTML.style.display = "block";
+	headerHTML.innerHTML = EXPLORING_SEXUALITY_HEADER;
+	sexualityButton.style.display = "block";
+	parentalInfluencesButton.style.display = "block";
+	oppositeSexButton.style.display = "block";
+	sexAndSpiritButton.style.display = "block";
+}
 const initializeSexuality = function() {
 	topicState = "sexuality";
+	clearPage();
 	loadStems(SEXUALITY_STEM_1, SEXUALITY_STEM_2, SEXUALITY_STEM_3, SEXUALITY_STEM_4, SEXUALITY_STEM_5, SEXUALITY_STEM_6);
 	headerHTML.innerHTML = SEXUALITY_HEADER;
 	initializeMoreStartPage();
 }
+const initializeParentalInfluences = function() {
+	topicState = "parental-influences";
+	clearPage();
+	headerHTML.innerHTML = PARENTAL_INFLUENCES_HEADER;
+	initializeFiveStartButtons();
+}
+const initializeOppositeSex = function() {
+	topicState = "opposite-sex";
+	clearPage();
+	headerHTML.innerHTML = OPPOSITE_SEX_HEADER;
+	loadStems(OPPOSITE_SEX_STEM_1, OPPOSITE_SEX_STEM_2, OPPOSITE_SEX_STEM_3, OPPOSITE_SEX_STEM_4, OPPOSITE_SEX_STEM_5, OPPOSITE_SEX_STEM_6);
+	initializeMoreStartPage();
+}
+const initializeSexAndSpirit = function() {
+	topicState = "sex-and-spirit";
+	clearPage();
+	headerHTML.innerHTML = SEX_AND_SPIRIT_HEADER;
+	loadStems(SEX_AND_SPIRIT_STEM_1, SEX_AND_SPIRIT_STEM_2, SEX_AND_SPIRIT_STEM_3, SEX_AND_SPIRIT_STEM_4, SEX_AND_SPIRIT_STEM_5, SEX_AND_SPIRIT_STEM_6);
+	initializeMoreStartPage();
+}
+
+//
 const initializeSelfEsteem = function() {
 	topicState = "self-esteem";
 	loadStems(SELF_ESTEEM_STEM_1, SELF_ESTEEM_STEM_2, SELF_ESTEEM_STEM_3, SELF_ESTEEM_STEM_4, SELF_ESTEEM_STEM_5, SELF_ESTEEM_STEM_6);
@@ -656,6 +754,8 @@ const clearPage = function() {
 	startButtonA.style.display = "none";
 	startButtonB.style.display = "none";
 	startButtonC.style.display = "none";
+	startButtonD.style.display = "none";
+	startButtonE.style.display = "none";
 	headerHTML.style.display = "none";
 	frontPageHeader.style.display = "none";
 	nextButton.style.display = "none";
@@ -682,6 +782,10 @@ const clearPage = function() {
 	loveButton.style.display = "none";
 	feelingLovedButton.style.display = "none";
 	excitementButton.style.display = "none";
+	sexualityButton.style.display = "none";
+	parentalInfluencesButton.style.display = "none";
+	oppositeSexButton.style.display = "none";
+	sexAndSpiritButton.style.display = "none";
 }
 const displayHowTo = function() {
 	howParagraph.style.display = "block";
@@ -758,6 +862,9 @@ const startExerciseA = function() {
 	else if(topicState === "excitement") {
 		loadStems(EXCITEMENT_STEM_A_1, EXCITEMENT_STEM_A_2, EXCITEMENT_STEM_A_3, EXCITEMENT_STEM_A_4, EXCITEMENT_STEM_A_5, EXCITEMENT_STEM_A_6);
 	}
+	else if(topicState === "parental-influences") {
+		loadStems(PARENTAL_INFLUENCES_STEM_A_1, PARENTAL_INFLUENCES_STEM_A_2, PARENTAL_INFLUENCES_STEM_A_3, PARENTAL_INFLUENCES_STEM_A_4, PARENTAL_INFLUENCES_STEM_A_5, PARENTAL_INFLUENCES_STEM_A_6);
+	}
 	startExercise();
 }
 const startExerciseB = function() {	
@@ -794,6 +901,9 @@ const startExerciseB = function() {
 	else if(topicState === "excitement") {
 		loadStems(EXCITEMENT_STEM_B_1, EXCITEMENT_STEM_B_2, EXCITEMENT_STEM_B_3, EXCITEMENT_STEM_B_4, EXCITEMENT_STEM_B_5, EXCITEMENT_STEM_B_6);
 	}
+	else if(topicState === "parental-influences") {
+		loadStems(PARENTAL_INFLUENCES_STEM_B_1, PARENTAL_INFLUENCES_STEM_B_2, PARENTAL_INFLUENCES_STEM_B_3, PARENTAL_INFLUENCES_STEM_B_4, PARENTAL_INFLUENCES_STEM_B_5, PARENTAL_INFLUENCES_STEM_B_6);
+	}
 	startExercise();
 }
 const startExerciseC = function() {
@@ -808,6 +918,21 @@ const startExerciseC = function() {
 	}
 	else if(topicState === "teenage") {
 		loadStems(TEENAGE_STEM_C_1, TEENAGE_STEM_C_2, TEENAGE_STEM_C_3, TEENAGE_STEM_C_4, TEENAGE_STEM_C_5, TEENAGE_STEM_C_6);
+	}
+	else if(topicState === "parental-influences") {
+		loadStems(PARENTAL_INFLUENCES_STEM_C_1, PARENTAL_INFLUENCES_STEM_C_2, PARENTAL_INFLUENCES_STEM_C_3, PARENTAL_INFLUENCES_STEM_C_4, PARENTAL_INFLUENCES_STEM_C_5, PARENTAL_INFLUENCES_STEM_C_6);
+	}
+	startExercise();
+}
+const startExerciseD = function() {
+	if(topicState === "parental-influences") {
+		loadStems(PARENTAL_INFLUENCES_STEM_D_1, PARENTAL_INFLUENCES_STEM_D_2, PARENTAL_INFLUENCES_STEM_D_3, PARENTAL_INFLUENCES_STEM_D_4, PARENTAL_INFLUENCES_STEM_D_5, PARENTAL_INFLUENCES_STEM_D_6);
+	}
+	startExercise();
+}
+const startExerciseE = function() {
+	if(topicState === "parental-influences") {
+		loadStems(PARENTAL_INFLUENCES_STEM_E_1, PARENTAL_INFLUENCES_STEM_E_2, PARENTAL_INFLUENCES_STEM_E_3, PARENTAL_INFLUENCES_STEM_E_4, PARENTAL_INFLUENCES_STEM_E_5, PARENTAL_INFLUENCES_STEM_E_6);
 	}
 	startExercise();
 }
@@ -982,14 +1107,24 @@ happinessButton.addEventListener("click", initializeHappiness);
 loveButton.addEventListener("click", initializeLove);
 feelingLovedButton.addEventListener("click", initializeFeelingLoved);
 excitementButton.addEventListener("click", initializeExcitement);
-//
+// Sexuality
+exploringSexualityButton.addEventListener("click", initializeExploringSexuality);
 sexualityButton.addEventListener("click", initializeSexuality);
+parentalInfluencesButton.addEventListener("click", initializeParentalInfluences);
+oppositeSexButton.addEventListener("click", initializeOppositeSex);
+sexAndSpiritButton.addEventListener("click", initializeSexAndSpirit);
+
+//
 selfEsteemButton.addEventListener("click", initializeSelfEsteem);
 sageSelfButton.addEventListener("click", initializeSageSelf);
+//start buttons
 startButton.addEventListener("click", startExercise);
 startButtonA.addEventListener("click", startExerciseA);
 startButtonB.addEventListener("click", startExerciseB);
 startButtonC.addEventListener("click", startExerciseC);
+startButtonD.addEventListener("click", startExerciseD);
+startButtonE.addEventListener("click", startExerciseE);
+//
 pauseButton.addEventListener("click", toggleTimer);
 nextButton.addEventListener("click", nextStem);
 saveButton.addEventListener("click", saveResults);
