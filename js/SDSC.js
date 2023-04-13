@@ -1001,7 +1001,7 @@ const startExerciseA = function() {
 	else if(topicState === "early-messages") {
 		loadStems(EARLY_MESSAGES_STEM_A_1, EARLY_MESSAGES_STEM_A_2, EARLY_MESSAGES_STEM_A_3, EARLY_MESSAGES_STEM_A_4, EARLY_MESSAGES_STEM_A_5, EARLY_MESSAGES_STEM_A_6);
 	}
-	else if(topicState === "behavior-tase") {
+	else if(topicState === "behaviors-tase") {
 		loadStems(BEHAVIOR_T_A_S_E_STEM_A_1, BEHAVIOR_T_A_S_E_STEM_A_2, BEHAVIOR_T_A_S_E_STEM_A_3, BEHAVIOR_T_A_S_E_STEM_A_4, BEHAVIOR_T_A_S_E_STEM_A_5, BEHAVIOR_T_A_S_E_STEM_A_6);
 	}
 	else if(topicState === "self-sabotage") {
@@ -1055,7 +1055,7 @@ const startExerciseB = function() {
 	else if(topicState === "early-messages") {
 		loadStems(EARLY_MESSAGES_STEM_B_1, EARLY_MESSAGES_STEM_B_2, EARLY_MESSAGES_STEM_B_3, EARLY_MESSAGES_STEM_B_4, EARLY_MESSAGES_STEM_B_5, EARLY_MESSAGES_STEM_B_6);
 	}
-	else if(topicState === "behavior-tase") {
+	else if(topicState === "behaviors-tase") {
 		loadStems(BEHAVIOR_T_A_S_E_STEM_B_1, BEHAVIOR_T_A_S_E_STEM_B_2, BEHAVIOR_T_A_S_E_STEM_B_3, BEHAVIOR_T_A_S_E_STEM_B_4, BEHAVIOR_T_A_S_E_STEM_B_5, BEHAVIOR_T_A_S_E_STEM_B_6);
 	}
 	else if(topicState === "self-sabotage") {

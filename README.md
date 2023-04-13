@@ -33,6 +33,8 @@ Christopher Barber Bsc, CEO of 13retonnian Web Development and PsychologicalSelf
 ### Links
 
 [Self Discovery Sentence Completion Github Page](https://13retonnian.github.io/self-discovery-sentence-completion/)
+
 [Github Repo Link](https://github.com/13retonnian/self-discovery-sentence-completion)
+
 [13retonnian Web Development](https://13retonnianWebDevelopment.com)
 
