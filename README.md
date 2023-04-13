@@ -1,6 +1,6 @@
 # Self Discovery Sentence Completion (Unfinished)
 
-- completed Intro up to exploring sexuality, about 75% done.
+- Completed Intro up to self-esteem, about 90% done.
 
 # How To Use
 

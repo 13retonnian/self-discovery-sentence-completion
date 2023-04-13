@@ -72,6 +72,10 @@
 	max-width: 100%;
 	
 }
+.behaviors-tase-button
+{
+	font-size: 40px;
+}
 .button:hover
 {
   background-color: rgb(183,218,172);
@@ -282,6 +286,10 @@ section
 	.pause-button
 	{
 		font-size: 20px;
+	}
+	.behaviors-tase-button
+	{
+		font-size: 40px;
 	}
 }
 

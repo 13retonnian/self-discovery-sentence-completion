@@ -32,8 +32,14 @@ const sexualityButton = document.querySelector(".sexuality-button");
 const parentalInfluencesButton = document.querySelector(".parental-influences-button");
 const oppositeSexButton = document.querySelector(".opposite-sex-button");
 const sexAndSpiritButton = document.querySelector(".sex-and-spirit-button");
-//
+// Self-Esteem
 const selfEsteemButton = document.querySelector(".self-esteem-button");
+const earlyMessagesButton = document.querySelector(".early-messages-button");
+const behaviorsTASE_Button = document.querySelector(".behaviors-tase-button");
+const selfSabotageButton = document.querySelector(".self-sabotage-button");
+const wakingUpButton = document.querySelector(".waking-up-button");
+const selfAcceptanceButton = document.querySelector(".self-acceptance-button");
+// Sage Self
 const sageSelfButton = document.querySelector(".sage-self-button");
 const nextButton = document.querySelector(".next-button");
 const saveButton = document.querySelector(".save-button");
@@ -97,8 +103,7 @@ I am speaking of childhood. <br><br>
 In exploring the role of parental influence on subsequent development, the purpose here is not to blame but to understand. <br><br>
 We are interested in Mother and Father as they exist in your mind (or fantasies), which may or may not bear a close relationship to reality. <br><br>
 And we are interested in how your memories or beliefs about your mother and father might affect your life today. <br><br>
-In your subconscious there is only a timeless present where yesterday and today are one. <br><br>
-`;
+In your subconscious there is only a timeless present where yesterday and today are one. <br><br>`;
 //child/teenage
 const CHILD_TEENAGE_HEADER = `Once upon a time each one of us was a child, and perhaps we don't realize that we carry that child within us, as an aspect of who we are. <br><br>
 Sometimes all of us shift into the state of consciousness of the child we once were and respond to situations in our adult lives as if (for all practical purposes) we were still that child, with his or her values, perspective, and distinctive way of processing experience. <br><br>
@@ -119,8 +124,7 @@ const INTEGRATION_HEADER = `This is an opportunity to tap into and articulate th
 // Negative Feelings
 const NEGATIVE_HEADER = `Our feelings and emotions reflect the significance that different aspects of reality have for us. <br><br>
 As such, they embody <i>value judgements</i> - super-rapid appraisals of "for me" or "against me," "beneficial" or "harmful," based on the way we percieve and interpret the particular facts (or thoughts) to which we are responding. <br><br>
-Here we will be concerned with understanding how different feelings and emotions arise, and what we typically do about them and, in some cases, what we might learn to do differently and better. <br><br>
-`;
+Here we will be concerned with understanding how different feelings and emotions arise, and what we typically do about them and, in some cases, what we might learn to do differently and better. <br><br>`;
 const PAIN_HEADER = `If you are tempted to cry to yourself, "But what can I <i>do</i> about feelings and emotions that hurt?" my answer is, "Breathe deeply and experience them." <br><br>
 Hear what they are trying to tell you. <br><br>
 Learn from them. <br><br>
@@ -144,8 +148,7 @@ You have a long way to go. <br><br>
 Rest, review and meditate on what you have written and contemplate on what new possibilities might be available to you with regard to the understanding and handling of emotions. <br><br>`;
 // Positive
 const POSITIVE_HEADER = `When we think of "unwanted" emotions, or emotions we seek to avoid or suppress, the natural inclination is to think in terms of "negatives": pain, fear, rage, and the like. <br><br>
-But the truth is that often it is positive emotional experience that we seek to suppress: excitement, love, sexuality. <br><br>
-`;
+But the truth is that often it is positive emotional experience that we seek to suppress: excitement, love, sexuality. <br><br>`;
 const HAPPINESS_HEADER = `Such emotions may threaten our equilibrium or our self-image. <br><br>
 When we are afraid of intense feelings of <i>any</i> kind, it is often the very best within us that we try to bury. <br><br>`;
 const LOVE_HEADER = `The tragedy of so many people's lives is that they are more concerned with avoiding hurt (or rejection) than with experiencing joy (or love). <br><br>
@@ -175,8 +178,33 @@ We attempt to disown whatever does not fit our image of what is appropriate. <br
 Thus, men often disown tenderness, sensuality, their ability to be nurturing, just as women often disown strength, assertiveness, sexuality, their ability to be self-reliant. <br><br>`;
 const SEX_AND_SPIRIT_HEADER = `What if it is self-delusion to imagine that our sex life bears little or no relation to the rest of who and what we are? <br><br>
 And if we do learn to see sex as an act of self-expression, what follows? <br><br>`;
-//
-const SELF_ESTEEM_HEADER = "";
+// Self Esteem
+const SELF_ESTEEM_HEADER = `Positive self-esteem is our deepest psychological need. By \"self-esteem,\" I mean our experience of being competent to deal with the challenges of life and of being deserving of happiness. <br><br> 
+I cannot think of a single major psychological problem - from fear of intimacy or of success, to underachievement at school or at work, to anxiety or depression, to alcohol abuse or drug addiction, to child molesting or spouse battering, to suicide or crimes of violence - that is traceable to a poor self-concept. <br><br>.
+Of all the judgements we pass in life, none is as important as the one we pass on ourselves. <br><br>
+Our self-concept tends to be our destiny. <br><br>`;
+const EARLY_MESSAGES_HEADER = `In what ways do you feel your self-esteem was influenced by the messages you received from adults when you were little? <br><br>
+How many of the things once told to you by your mother and father do you now tell yourself? <br><br>
+And are they positive messages or negative? <br><br>
+If your mother or father gave you destructive messages, are you now giving them to yourself? <br><br>
+Or are you willing to challenge them? <br><br>`;
+const BEHAVIORS_T_A_S_E_HEADER = `We may think of self-esteem as the experience that we are <i>competent</i> to live and <i>worthy</i> of happiness. <br><br>
+The experience that I am competent to live means confidence in the functioning of my mind, in my ability to understand and judge the facts of reality within the sphere of mt interests and needs; intellectual self-trust; intellectual self-reliance. <br><br>
+The experience that I am worthy of happiness means an affirmative attitude toward my right to a joyful existence; an affirmative attitude toward the assertion of my wants and needs; self-acceptance and self-respect; the feeling that happiness is my natural birthright. <br><br>`;
+const SELF_SABOTAGE_HEADER = `We are often the saboteurs of our own happiness and stand in the way of our own fulfilment. <br><br>
+We undermine our efforts for success in relationships. <br><br>
+We do not realize how easy it is for us to stand in our own way. <br><br>
+The purpose of these stems is to allow us to explore that territory. <br><br>`;
+const WAKING_UP_HEADER = `What would change for you if you had the courage to honor your own excitement? <br><br>
+To honor the life within you? <br><br>
+What would change if you allowed old pains to fade into irrelevance? <br><br>
+What do you imagine? <br><br>
+What are your fantasies of how your future might be different? <br><br>`;
+const SELF_ACCEPTANCE_HEADER = `Are you now willing to see what you see and know what you know? <br><br>
+Are you willing to release the best within yourself? <br><br>
+Are you willing to defy all the people who may have given you negative messages and assert your right to live and be happy? <br><br>
+What strikes you as most important for your life right now? <br><br>`;
+// Sage Self
 const SAGE_SELF_HEADER = "";
 // Sentence Stems
 //initialize stems
@@ -480,16 +508,80 @@ const SEX_AND_SPIRIT_STEM_5 = `The difficult thing about looking clearly at this
 const SEX_AND_SPIRIT_STEM_6 = `The liberating thing about looking at this issue clearly might be...`;
 // Self-Esteem
 // - Early Messages
-// - Behaviors
+// - Behaviors that affect self-esteem
 // - Self-Sabotage
 // - Waking Up
 // - Self-Acceptance
-const SELF_ESTEEM_STEM_1 = "";
-const SELF_ESTEEM_STEM_2 = "";
-const SELF_ESTEEM_STEM_3 = "";
-const SELF_ESTEEM_STEM_4 = "";
-const SELF_ESTEEM_STEM_5 = "";
-const SELF_ESTEEM_STEM_6 = "";
+const EARLY_MESSAGES_STEM_A_1 = `Mother gave me the sense that I was...`;
+const EARLY_MESSAGES_STEM_A_2 = `Father gave me the sense that I was...`;
+const EARLY_MESSAGES_STEM_A_3 = `When Mother saw me making mistakes, she...`;
+const EARLY_MESSAGES_STEM_A_4 = `When Father saw me making mistakes, he...`;
+const EARLY_MESSAGES_STEM_A_5 = `When I see myself making mistakes, I...`;
+const EARLY_MESSAGES_STEM_A_6 = `If someone had fully believed in my intelligence...`;
+// Early Messages B
+const EARLY_MESSAGES_STEM_B_1 = `If someone had fully believe in my goodness...`;
+const EARLY_MESSAGES_STEM_B_2 = `One of the messages about myself I absorbed in childhood was that I...`;
+const EARLY_MESSAGES_STEM_B_3 = `I am becoming aware...`;
+const EARLY_MESSAGES_STEM_B_4 = `The thing that feels most important to to write down is...`;
+const EARLY_MESSAGES_STEM_B_5 = `The ways I feel that my self-esteem was influenced by the messages that I received from adults when I was little are...`;
+const EARLY_MESSAGES_STEM_B_6 = `The things I tell myself that my mother and father told me are...`;
+// Behaviors TASE A
+const BEHAVIOR_T_A_S_E_STEM_A_1 = `Sometimes I hurt my self-esteem when I...`;
+const BEHAVIOR_T_A_S_E_STEM_A_2 = `I like myself most when I...`;
+const BEHAVIOR_T_A_S_E_STEM_A_3 = `I like myself most when, in dealing with others, I...`;
+const BEHAVIOR_T_A_S_E_STEM_A_4 = `When I choose to function consciously and think about what I am doing...`;
+const BEHAVIOR_T_A_S_E_STEM_A_5 = `When I am dishonest with myself or others...`;
+const BEHAVIOR_T_A_S_E_STEM_A_6 = `When I am honest with myself or others...`;
+// Behaviors TASE B
+const BEHAVIOR_T_A_S_E_STEM_B_1 = `When I act with integrity...`;
+const BEHAVIOR_T_A_S_E_STEM_B_2 = `If I say "no" when I want to say "no," and "yes" when I want to say "yes"... `;
+const BEHAVIOR_T_A_S_E_STEM_B_3 = `When I take full responsiblity for every word I utter...`;
+const BEHAVIOR_T_A_S_E_STEM_B_4 = `If I allow myself to understand what I am writing...`;
+const BEHAVIOR_T_A_S_E_STEM_B_5 = `If any of what I've been writing is true...`;
+const BEHAVIOR_T_A_S_E_STEM_B_6 = `It might be helpful if I...`;
+// Self-Sabotage
+const SELF_SABOTAGE_STEM_A_1 = `One of the ways I sometimes contribute to my own frustration is...`;
+const SELF_SABOTAGE_STEM_A_2 = `One of the ways I sometimes make it difficult for people to give me what I want is...`;
+const SELF_SABOTAGE_STEM_A_3 = `One of the ways I sometimes obstruct my own success is...`;
+const SELF_SABOTAGE_STEM_A_4 = `One of the ways I sometimes make myself helpless is...`;
+const SELF_SABOTAGE_STEM_A_5 = `The good thing about making myself helpless is...`;
+const SELF_SABOTAGE_STEM_A_6 = `If I were to take full responsibility for my own existence...`;
+// self-sabotage B
+const SELF_SABOTAGE_STEM_B_1 = `If I were to take full responsibility for getting what I want...`;
+const SELF_SABOTAGE_STEM_B_2 = `If I fully accepted my right to be happy...`;
+const SELF_SABOTAGE_STEM_B_3 = `I am becoming aware...`;
+const SELF_SABOTAGE_STEM_B_4 = `If I allow myself to understand what I have been writing...`;
+const SELF_SABOTAGE_STEM_B_5 = `It is becoming clear to me that...`;
+const SELF_SABOTAGE_STEM_B_6 = `If I were willing to admit what I see and know...`;
+// waking up A
+const WAKING_UP_STEM_A_1 = `If I exercise the courage to honor my own life...`;
+const WAKING_UP_STEM_A_2 = `If I were willing to see what I see and know what I know...`;
+const WAKING_UP_STEM_A_3 = `If I were willing to breathe deeply and feel my own power...`;
+const WAKING_UP_STEM_A_4 = `If I allow old wounds to fade away...`;
+const WAKING_UP_STEM_A_5 = `If I allow myself to wake up to the possibilities of life...`;
+const WAKING_UP_STEM_A_6 = `If I stop blaming others and start living...`;
+// waking up B
+const WAKING_UP_STEM_B_1 = `If I stop looking for someone to feel sorry for me...`;
+const WAKING_UP_STEM_B_2 = `If I had the courage to honor my own excitement...`;
+const WAKING_UP_STEM_B_3 = `As I allow myself to feel lighter...`;
+const WAKING_UP_STEM_B_4 = `If I had the courage to honor my own excitement...`;
+const WAKING_UP_STEM_B_5 = `If I honor the life within me...`;
+const WAKING_UP_STEM_B_6 = `If I allow old pains to fade into irrelevance...`;
+// self acceptance
+const SELF_ACCEPTANCE_STEM_A_1 = `If self-acceptance means not denying or disowning who I am...`;
+const SELF_ACCEPTANCE_STEM_A_2 = `If self-acceptance is the foundation of good self-esteem...`;
+const SELF_ACCEPTANCE_STEM_A_3 = `As I learn to accept my feelings whether I like them or not...`;
+const SELF_ACCEPTANCE_STEM_A_4 = `As I learn to accept all the different parts of who I am...`;
+const SELF_ACCEPTANCE_STEM_A_5 = `As I breathe into feelings rather than pretend I don't feel them...`;
+const SELF_ACCEPTANCE_STEM_A_6 = `As I admit how much I secretly (or not so secretly) like myself...`;
+// self acceptance B
+const SELF_ACCEPTANCE_STEM_B_1 = `If I surrender to the process of change and growth..`;
+const SELF_ACCEPTANCE_STEM_B_2 = `As I become more serene...`;
+const SELF_ACCEPTANCE_STEM_B_3 = `As I feel energy flowing through my body...`;
+const SELF_ACCEPTANCE_STEM_B_4 = `As this work changes me in ways I have not fully noticed...`;
+const SELF_ACCEPTANCE_STEM_B_5 = `I am becoming aware...`;
+const SELF_ACCEPTANCE_STEM_B_6 = `If I release the best within myself...`;
+
 // Sage-Self
 // - Higher Self
 // - Triumph of Self-Esteem
@@ -731,14 +823,50 @@ const initializeSexAndSpirit = function() {
 	loadStems(SEX_AND_SPIRIT_STEM_1, SEX_AND_SPIRIT_STEM_2, SEX_AND_SPIRIT_STEM_3, SEX_AND_SPIRIT_STEM_4, SEX_AND_SPIRIT_STEM_5, SEX_AND_SPIRIT_STEM_6);
 	initializeMoreStartPage();
 }
-
-//
+// Self Esteem
 const initializeSelfEsteem = function() {
 	topicState = "self-esteem";
-	loadStems(SELF_ESTEEM_STEM_1, SELF_ESTEEM_STEM_2, SELF_ESTEEM_STEM_3, SELF_ESTEEM_STEM_4, SELF_ESTEEM_STEM_5, SELF_ESTEEM_STEM_6);
+	clearPage();
 	headerHTML.innerHTML = SELF_ESTEEM_HEADER;
-	initializeMoreStartPage();
+	headerHTML.style.display = "block";
+	homeButton.style.display = "block";
+	earlyMessagesButton.style.display = "block";
+	behaviorsTASE_Button.style.display = "block";
+	selfSabotageButton.style.display = "block";
+	wakingUpButton.style.display = "block";
+	selfAcceptanceButton.style.display = "block";
 }
+const initializeEarlyMessages = function() {
+	topicState = "early-messages";
+	clearPage();
+	headerHTML.innerHTML = EARLY_MESSAGES_HEADER;
+	initializeTwoStartButtons();
+}
+const initializeBehaviorsTASE = function() {
+	topicState = "behaviors-tase";
+	clearPage();
+	headerHTML.innerHTML = BEHAVIORS_T_A_S_E_HEADER;
+	initializeTwoStartButtons();
+}
+const initializeSelfSabotage = function() {
+	topicState = "self-sabotage";
+	clearPage();
+	headerHTML.innerHTML = SELF_SABOTAGE_HEADER;
+	initializeTwoStartButtons();
+}
+const initializeWakingUp = function() {
+	topicState = "waking-up";
+	clearPage();
+	headerHTML.innerHTML = WAKING_UP_HEADER;
+	initializeTwoStartButtons();
+}
+const initializeSelfAcceptance = function() {
+	topicState = "self-acceptance";
+	clearPage();
+	headerHTML.innerHTML = SELF_ACCEPTANCE_HEADER;
+	initializeTwoStartButtons();
+}
+//
 const initializeSageSelf = function() {
 	topicState = "sage-self";
 	loadStems(SAGE_SELF_STEM_1, SAGE_SELF_STEM_2, SAGE_SELF_STEM_3, SAGE_SELF_STEM_4, SAGE_SELF_STEM_5, SAGE_SELF_STEM_6);
@@ -786,6 +914,11 @@ const clearPage = function() {
 	parentalInfluencesButton.style.display = "none";
 	oppositeSexButton.style.display = "none";
 	sexAndSpiritButton.style.display = "none";
+	earlyMessagesButton.style.display = "none";
+	behaviorsTASE_Button.style.display = "none";
+	selfSabotageButton.style.display = "none";
+	wakingUpButton.style.display = "none";
+	selfAcceptanceButton.style.display = "none";
 }
 const displayHowTo = function() {
 	howParagraph.style.display = "block";
@@ -865,6 +998,21 @@ const startExerciseA = function() {
 	else if(topicState === "parental-influences") {
 		loadStems(PARENTAL_INFLUENCES_STEM_A_1, PARENTAL_INFLUENCES_STEM_A_2, PARENTAL_INFLUENCES_STEM_A_3, PARENTAL_INFLUENCES_STEM_A_4, PARENTAL_INFLUENCES_STEM_A_5, PARENTAL_INFLUENCES_STEM_A_6);
 	}
+	else if(topicState === "early-messages") {
+		loadStems(EARLY_MESSAGES_STEM_A_1, EARLY_MESSAGES_STEM_A_2, EARLY_MESSAGES_STEM_A_3, EARLY_MESSAGES_STEM_A_4, EARLY_MESSAGES_STEM_A_5, EARLY_MESSAGES_STEM_A_6);
+	}
+	else if(topicState === "behavior-tase") {
+		loadStems(BEHAVIOR_T_A_S_E_STEM_A_1, BEHAVIOR_T_A_S_E_STEM_A_2, BEHAVIOR_T_A_S_E_STEM_A_3, BEHAVIOR_T_A_S_E_STEM_A_4, BEHAVIOR_T_A_S_E_STEM_A_5, BEHAVIOR_T_A_S_E_STEM_A_6);
+	}
+	else if(topicState === "self-sabotage") {
+		loadStems(SELF_SABOTAGE_STEM_A_1, SELF_SABOTAGE_STEM_A_2, SELF_SABOTAGE_STEM_A_3, SELF_SABOTAGE_STEM_A_4, SELF_SABOTAGE_STEM_A_5, SELF_SABOTAGE_STEM_A_6);
+	}
+	else if(topicState === "waking-up") {
+		loadStems(WAKING_UP_STEM_A_1, WAKING_UP_STEM_A_2, WAKING_UP_STEM_A_3, WAKING_UP_STEM_A_4, WAKING_UP_STEM_A_5, WAKING_UP_STEM_A_6);
+	}
+	else if(topicState === "self-acceptance") {
+		loadStems(SELF_ACCEPTANCE_STEM_A_1, SELF_ACCEPTANCE_STEM_A_2, SELF_ACCEPTANCE_STEM_A_3, SELF_ACCEPTANCE_STEM_A_4, SELF_ACCEPTANCE_STEM_A_5, SELF_ACCEPTANCE_STEM_A_6);
+	}
 	startExercise();
 }
 const startExerciseB = function() {	
@@ -903,6 +1051,21 @@ const startExerciseB = function() {
 	}
 	else if(topicState === "parental-influences") {
 		loadStems(PARENTAL_INFLUENCES_STEM_B_1, PARENTAL_INFLUENCES_STEM_B_2, PARENTAL_INFLUENCES_STEM_B_3, PARENTAL_INFLUENCES_STEM_B_4, PARENTAL_INFLUENCES_STEM_B_5, PARENTAL_INFLUENCES_STEM_B_6);
+	}
+	else if(topicState === "early-messages") {
+		loadStems(EARLY_MESSAGES_STEM_B_1, EARLY_MESSAGES_STEM_B_2, EARLY_MESSAGES_STEM_B_3, EARLY_MESSAGES_STEM_B_4, EARLY_MESSAGES_STEM_B_5, EARLY_MESSAGES_STEM_B_6);
+	}
+	else if(topicState === "behavior-tase") {
+		loadStems(BEHAVIOR_T_A_S_E_STEM_B_1, BEHAVIOR_T_A_S_E_STEM_B_2, BEHAVIOR_T_A_S_E_STEM_B_3, BEHAVIOR_T_A_S_E_STEM_B_4, BEHAVIOR_T_A_S_E_STEM_B_5, BEHAVIOR_T_A_S_E_STEM_B_6);
+	}
+	else if(topicState === "self-sabotage") {
+		loadStems(SELF_SABOTAGE_STEM_B_1, SELF_SABOTAGE_STEM_B_2, SELF_SABOTAGE_STEM_B_3, SELF_SABOTAGE_STEM_B_4, SELF_SABOTAGE_STEM_B_5, SELF_SABOTAGE_STEM_B_6);
+	}
+	else if(topicState === "waking-up") {
+		loadStems(WAKING_UP_STEM_B_1, WAKING_UP_STEM_B_2, WAKING_UP_STEM_B_3, WAKING_UP_STEM_B_4, WAKING_UP_STEM_B_5, WAKING_UP_STEM_B_6);
+	}
+	else if(topicState === "self-acceptance") {
+		loadStems(SELF_ACCEPTANCE_STEM_B_1, SELF_ACCEPTANCE_STEM_B_2, SELF_ACCEPTANCE_STEM_B_3, SELF_ACCEPTANCE_STEM_B_4, SELF_ACCEPTANCE_STEM_B_5, SELF_ACCEPTANCE_STEM_B_6);
 	}
 	startExercise();
 }
@@ -1113,9 +1276,14 @@ sexualityButton.addEventListener("click", initializeSexuality);
 parentalInfluencesButton.addEventListener("click", initializeParentalInfluences);
 oppositeSexButton.addEventListener("click", initializeOppositeSex);
 sexAndSpiritButton.addEventListener("click", initializeSexAndSpirit);
-
-//
+// self esteem
 selfEsteemButton.addEventListener("click", initializeSelfEsteem);
+earlyMessagesButton.addEventListener("click", initializeEarlyMessages);
+behaviorsTASE_Button.addEventListener("click", initializeBehaviorsTASE);
+selfSabotageButton.addEventListener("click", initializeSelfSabotage);
+wakingUpButton.addEventListener("click", initializeWakingUp);
+selfAcceptanceButton.addEventListener("click", initializeSelfAcceptance);
+//
 sageSelfButton.addEventListener("click", initializeSageSelf);
 //start buttons
 startButton.addEventListener("click", startExercise);
