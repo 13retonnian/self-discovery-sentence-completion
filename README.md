@@ -1,8 +1,5 @@
-# Self Discovery Sentence Completion (Unfinished)
-
-- Completed Intro up to self-esteem, about 90% done.
-
-# How To Use
+# Self Discovery Sentence Completion 1.0
+## How To Use
 
 To use Self-Discovery Sentence Completion select a topic then complete the sentences that appear.
 

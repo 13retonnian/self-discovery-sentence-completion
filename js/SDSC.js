@@ -41,6 +41,11 @@ const wakingUpButton = document.querySelector(".waking-up-button");
 const selfAcceptanceButton = document.querySelector(".self-acceptance-button");
 // Sage Self
 const sageSelfButton = document.querySelector(".sage-self-button");
+const higherSelfButton = document.querySelector(".higher-self-button");
+const triumphOfSE_Button = document.querySelector(".triumph-of-se-button");
+// random
+const randomButton = document.querySelector(".random-button");
+//buttons
 const nextButton = document.querySelector(".next-button");
 const saveButton = document.querySelector(".save-button");
 const startButton = document.querySelector(".start-button");
@@ -64,7 +69,7 @@ const resultsHTML = document.querySelector(".results");
 const resultsHeader = document.querySelector(".results-header");
 const savedIndicator = document.querySelector(".saved-indicator");
 //constants
-const NUMBER_OF_STEMS = 48;
+const NUMBER_OF_STEMS = 318;
 const NUMBER_OF_INTRODUCTORY_STEMS = 6;
 // Parental
 const NUMBER_OF_BEGINNING_STEMS = 6;
@@ -205,7 +210,19 @@ Are you willing to release the best within yourself? <br><br>
 Are you willing to defy all the people who may have given you negative messages and assert your right to live and be happy? <br><br>
 What strikes you as most important for your life right now? <br><br>`;
 // Sage Self
-const SAGE_SELF_HEADER = "";
+const SAGE_SELF_HEADER = `In doing psychotherapy I find it useful to work with the concept of a sage-self (or higher self) - a part of our psyche that is much wiser than the rest of us, much more in contact with out deepest needs and best possibilities. <br><br>
+It is a powerful metaphor, and perhaps a bit more than a metaphor. <br><br>`;
+const HIGHER_SELF_HEADER = `All of us have known moments of extraordinary lucidity when ordinary limitations and constraints seem to fall away. <br><br>
+We can look objectively at our lives, and experience what is truly important, with almost supernormal clarity. <br><br>
+That perspective is the sage-self. <br><br>`;
+const TRIUMPH_OF_SE_HEADER = `Understanding is power. <br><br>
+Even if the facts we encounter initially are a bit frightening, we are at our strongest when we align ourselves with reality rather than when we seek to evade it. <br><br>
+If we allow ourselves to let in what is true, fully experience it, and be willing to stand in its presence, new ideas, new possibilities, new solutions, and new directions begin to occur to us. <br><br>
+Trues your own mind. <br><br>
+Trust your own creativity. <br><br>
+If you commit yourself to the work, doors will open. <br><br>`;
+const RANDOM_HEADER = `You are competent to cope with the challenges of life and you are deserving of happiness. <br><br>
+For this exercise six stems will be chosen randomly from the topics. <br><br>`;
 // Sentence Stems
 //initialize stems
 let stem1;
@@ -581,16 +598,94 @@ const SELF_ACCEPTANCE_STEM_B_3 = `As I feel energy flowing through my body...`;
 const SELF_ACCEPTANCE_STEM_B_4 = `As this work changes me in ways I have not fully noticed...`;
 const SELF_ACCEPTANCE_STEM_B_5 = `I am becoming aware...`;
 const SELF_ACCEPTANCE_STEM_B_6 = `If I release the best within myself...`;
-
 // Sage-Self
 // - Higher Self
 // - Triumph of Self-Esteem
-const SAGE_SELF_STEM_1 = "";
-const SAGE_SELF_STEM_2 = "";
-const SAGE_SELF_STEM_3 = "";
-const SAGE_SELF_STEM_4 = "";
-const SAGE_SELF_STEM_5 = "";
-const SAGE_SELF_STEM_6 = "";
+const HIGHER_SELF_STEM_A_1 = `If there is a part of me that knows more than my conscious mind...`;
+const HIGHER_SELF_STEM_A_2 = `Sometimes, when I am alone and see my life with my own eyes...`;
+const HIGHER_SELF_STEM_A_3 = `When I feel connected with what really matters to me...`;
+const HIGHER_SELF_STEM_A_4 = `When I think of all the nonsense I allow to clutter up my vision...`;
+const HIGHER_SELF_STEM_A_5 = `As I rise higher and higher above concerns that are not really what life is about...`;
+const HIGHER_SELF_STEM_A_6 = `When I look at my childhood from the perspective of my higher self...`;
+// higher self B
+const HIGHER_SELF_STEM_B_1 = `When I rise above fighting myself or blaming others...`;
+const HIGHER_SELF_STEM_B_2 = `When I understand that all that exists is the present...`;
+const HIGHER_SELF_STEM_B_3 = `When I allow myself to experience the ecstatic part of me...`;
+const HIGHER_SELF_STEM_B_4 = `I am becoming aware...`;
+const HIGHER_SELF_STEM_B_5 = `As my subconscious mind absorbs everything I have been writing...`;
+const HIGHER_SELF_STEM_B_6 = `As these understandings become more and more a part of me...`;
+// Triumph of the self
+const TRIUMPH_OF_SE_STEM_A_1 = `As I learn to hear the voice of my sage-self...`;
+const TRIUMPH_OF_SE_STEM_A_2 = `As I become more sensitive to the things a deeper part of me knows...`;
+const TRIUMPH_OF_SE_STEM_A_3 = `As I learn to honor my own wisdom...`;
+const TRIUMPH_OF_SE_STEM_A_4 = `As I gain the courage to live from the perspective of my sage-self...`;
+const TRIUMPH_OF_SE_STEM_A_5 = `If my best and clearest moments turn out to be what life is really all about...`;
+const TRIUMPH_OF_SE_STEM_A_6 = `When I am fully ready to see what I see and know what I know...`;
+// Triumph of the self B
+const TRIUMPH_OF_SE_STEM_B_1 = `As I breathe deeply and feel my own power...`;
+const TRIUMPH_OF_SE_STEM_B_2 = `When I look back at the distance I have traveled since beginning these sentence stems...`;
+const TRIUMPH_OF_SE_STEM_B_3 = `Right now it seems clear that...`;
+const TRIUMPH_OF_SE_STEM_B_4 = `If any of what I have been writing is true, it might be helpful if I...`;
+const TRIUMPH_OF_SE_STEM_B_5 = `If I allow this procedure to lead to a breakthrough...`;
+const TRIUMPH_OF_SE_STEM_B_6 = `When I realize that understanding is power...`;
+// Random 
+const stemArray = 
+[
+	INTRODUCTORY_STEM_1, INTRODUCTORY_STEM_2, INTRODUCTORY_STEM_3, INTRODUCTORY_STEM_4, INTRODUCTORY_STEM_5, INTRODUCTORY_STEM_6,
+	BEGINNING_STEM_1, BEGINNING_STEM_2, BEGINNING_STEM_3, BEGINNING_STEM_4, BEGINNING_STEM_5, BEGINNING_STEM_6,
+	MOTHER_STEM_A_1, MOTHER_STEM_A_2, MOTHER_STEM_A_3, MOTHER_STEM_A_4, MOTHER_STEM_A_5, MOTHER_STEM_A_6,
+	MOTHER_STEM_B_1, MOTHER_STEM_B_2, MOTHER_STEM_B_3, MOTHER_STEM_B_4, MOTHER_STEM_B_5, MOTHER_STEM_B_6,
+	MOTHER_STEM_C_1, MOTHER_STEM_C_2, MOTHER_STEM_C_3, MOTHER_STEM_C_4, MOTHER_STEM_C_5, MOTHER_STEM_C_6,
+	FATHER_STEM_A_1, FATHER_STEM_A_2, FATHER_STEM_A_3, FATHER_STEM_A_4, FATHER_STEM_A_5, FATHER_STEM_A_6,
+	FATHER_STEM_B_1, FATHER_STEM_B_2, FATHER_STEM_B_3, FATHER_STEM_B_4, FATHER_STEM_B_5, FATHER_STEM_B_6,
+	FATHER_STEM_C_1, FATHER_STEM_C_2, FATHER_STEM_C_3, FATHER_STEM_C_4, FATHER_STEM_C_5, FATHER_STEM_C_6,
+	ANOTHER_PERSPECTIVE_STEM_1, ANOTHER_PERSPECTIVE_STEM_2, ANOTHER_PERSPECTIVE_STEM_3, ANOTHER_PERSPECTIVE_STEM_4, ANOTHER_PERSPECTIVE_STEM_5, ANOTHER_PERSPECTIVE_STEM_6,
+	CHILD_STEM_A_1, CHILD_STEM_A_2, CHILD_STEM_A_3, CHILD_STEM_A_4, CHILD_STEM_A_5, CHILD_STEM_A_6,
+	CHILD_STEM_B_1, CHILD_STEM_B_2, CHILD_STEM_B_3, CHILD_STEM_B_4, CHILD_STEM_B_5, CHILD_STEM_B_6,
+	CHILD_STEM_C_1, CHILD_STEM_C_2, CHILD_STEM_C_3, CHILD_STEM_C_4, CHILD_STEM_C_5, CHILD_STEM_C_6,
+	TEENAGE_STEM_A_1, TEENAGE_STEM_A_2, TEENAGE_STEM_A_3, TEENAGE_STEM_A_4, TEENAGE_STEM_A_5, TEENAGE_STEM_A_6,
+	TEENAGE_STEM_B_1, TEENAGE_STEM_B_2, TEENAGE_STEM_B_3, TEENAGE_STEM_B_4, TEENAGE_STEM_B_5, TEENAGE_STEM_B_6,
+	TEENAGE_STEM_C_1, TEENAGE_STEM_C_2, TEENAGE_STEM_C_3, TEENAGE_STEM_C_4, TEENAGE_STEM_C_5, TEENAGE_STEM_C_6,
+	INTEGRATION_STEM_1, INTEGRATION_STEM_2, INTEGRATION_STEM_3, INTEGRATION_STEM_4, INTEGRATION_STEM_5, INTEGRATION_STEM_6,
+	PAIN_STEM_A_1, PAIN_STEM_A_2, PAIN_STEM_A_3, PAIN_STEM_A_4, PAIN_STEM_A_5, PAIN_STEM_A_6,
+	PAIN_STEM_B_1, PAIN_STEM_B_2, PAIN_STEM_B_3, PAIN_STEM_B_4, PAIN_STEM_B_5, PAIN_STEM_B_6,
+	ANGER_STEM_A_1, ANGER_STEM_A_2, ANGER_STEM_A_3, ANGER_STEM_A_4, ANGER_STEM_A_5, ANGER_STEM_A_6,
+	ANGER_STEM_B_1, ANGER_STEM_B_2, ANGER_STEM_B_3, ANGER_STEM_B_4, ANGER_STEM_B_5, ANGER_STEM_B_6,
+	FEAR_STEM_A_1, FEAR_STEM_A_2, FEAR_STEM_A_3, FEAR_STEM_A_4, FEAR_STEM_A_5, FEAR_STEM_A_6,
+	FEAR_STEM_B_1, FEAR_STEM_B_2, FEAR_STEM_B_3, FEAR_STEM_B_4, FEAR_STEM_B_5, FEAR_STEM_B_6,
+	ENVY_STEM_1, ENVY_STEM_2, ENVY_STEM_3, ENVY_STEM_4, ENVY_STEM_5, ENVY_STEM_6,
+	HAPPINESS_STEM_A_1, HAPPINESS_STEM_A_2, HAPPINESS_STEM_A_3, HAPPINESS_STEM_A_4, HAPPINESS_STEM_A_5, HAPPINESS_STEM_A_6,
+	HAPPINESS_STEM_B_1, HAPPINESS_STEM_B_2, HAPPINESS_STEM_B_3, HAPPINESS_STEM_B_4, HAPPINESS_STEM_B_5, HAPPINESS_STEM_B_6,
+	LOVE_STEM_A_1, LOVE_STEM_A_2, LOVE_STEM_A_3, LOVE_STEM_A_4, LOVE_STEM_A_5, LOVE_STEM_A_6,
+	LOVE_STEM_B_1, LOVE_STEM_B_2, LOVE_STEM_B_3, LOVE_STEM_B_4, LOVE_STEM_B_5, LOVE_STEM_B_6,
+	FEELING_LOVED_STEM_A_1, FEELING_LOVED_STEM_A_2, FEELING_LOVED_STEM_A_3, FEELING_LOVED_STEM_A_4, FEELING_LOVED_STEM_A_5, FEELING_LOVED_STEM_A_6,
+	FEELING_LOVED_STEM_B_1, FEELING_LOVED_STEM_B_2, FEELING_LOVED_STEM_B_3, FEELING_LOVED_STEM_B_4, FEELING_LOVED_STEM_B_5, FEELING_LOVED_STEM_B_6,
+	EXCITEMENT_STEM_A_1, EXCITEMENT_STEM_A_2, EXCITEMENT_STEM_A_3, EXCITEMENT_STEM_A_4, EXCITEMENT_STEM_A_5, EXCITEMENT_STEM_A_6,
+	EXCITEMENT_STEM_B_1, EXCITEMENT_STEM_B_2, EXCITEMENT_STEM_B_3, EXCITEMENT_STEM_B_4, EXCITEMENT_STEM_B_5, EXCITEMENT_STEM_B_6,
+	SEXUALITY_STEM_1, SEXUALITY_STEM_2, SEXUALITY_STEM_3, SEXUALITY_STEM_4, SEXUALITY_STEM_5, SEXUALITY_STEM_6,
+	PARENTAL_INFLUENCES_STEM_A_1, PARENTAL_INFLUENCES_STEM_A_2, PARENTAL_INFLUENCES_STEM_A_3, PARENTAL_INFLUENCES_STEM_A_4, PARENTAL_INFLUENCES_STEM_A_5, PARENTAL_INFLUENCES_STEM_A_6,
+	PARENTAL_INFLUENCES_STEM_B_1, PARENTAL_INFLUENCES_STEM_B_2, PARENTAL_INFLUENCES_STEM_B_3, PARENTAL_INFLUENCES_STEM_B_4, PARENTAL_INFLUENCES_STEM_B_5, PARENTAL_INFLUENCES_STEM_B_6,
+	PARENTAL_INFLUENCES_STEM_C_1, PARENTAL_INFLUENCES_STEM_C_2, PARENTAL_INFLUENCES_STEM_C_3, PARENTAL_INFLUENCES_STEM_C_4, PARENTAL_INFLUENCES_STEM_C_5, PARENTAL_INFLUENCES_STEM_C_6,
+	PARENTAL_INFLUENCES_STEM_D_1, PARENTAL_INFLUENCES_STEM_D_2, PARENTAL_INFLUENCES_STEM_D_3, PARENTAL_INFLUENCES_STEM_D_4, PARENTAL_INFLUENCES_STEM_D_5, PARENTAL_INFLUENCES_STEM_D_6,
+	PARENTAL_INFLUENCES_STEM_E_1, PARENTAL_INFLUENCES_STEM_E_2, PARENTAL_INFLUENCES_STEM_E_3, PARENTAL_INFLUENCES_STEM_E_4, PARENTAL_INFLUENCES_STEM_E_5, PARENTAL_INFLUENCES_STEM_E_6,
+	OPPOSITE_SEX_STEM_1, OPPOSITE_SEX_STEM_2, OPPOSITE_SEX_STEM_3, OPPOSITE_SEX_STEM_4, OPPOSITE_SEX_STEM_5, OPPOSITE_SEX_STEM_6,
+	SEX_AND_SPIRIT_STEM_1, SEX_AND_SPIRIT_STEM_2, SEX_AND_SPIRIT_STEM_3, SEX_AND_SPIRIT_STEM_4, SEX_AND_SPIRIT_STEM_5, SEX_AND_SPIRIT_STEM_6,
+	EARLY_MESSAGES_STEM_A_1, EARLY_MESSAGES_STEM_A_2, EARLY_MESSAGES_STEM_A_3, EARLY_MESSAGES_STEM_A_4, EARLY_MESSAGES_STEM_A_5, EARLY_MESSAGES_STEM_A_6,
+	EARLY_MESSAGES_STEM_B_1, EARLY_MESSAGES_STEM_B_2, EARLY_MESSAGES_STEM_B_3, EARLY_MESSAGES_STEM_B_4, EARLY_MESSAGES_STEM_B_5, EARLY_MESSAGES_STEM_B_6,
+	BEHAVIOR_T_A_S_E_STEM_A_1, BEHAVIOR_T_A_S_E_STEM_A_2, BEHAVIOR_T_A_S_E_STEM_A_3, BEHAVIOR_T_A_S_E_STEM_A_4, BEHAVIOR_T_A_S_E_STEM_A_5, BEHAVIOR_T_A_S_E_STEM_A_6,
+	BEHAVIOR_T_A_S_E_STEM_B_1, BEHAVIOR_T_A_S_E_STEM_B_2, BEHAVIOR_T_A_S_E_STEM_B_3, BEHAVIOR_T_A_S_E_STEM_B_4, BEHAVIOR_T_A_S_E_STEM_B_5, BEHAVIOR_T_A_S_E_STEM_B_6,
+	SELF_SABOTAGE_STEM_A_1, SELF_SABOTAGE_STEM_A_2, SELF_SABOTAGE_STEM_A_3, SELF_SABOTAGE_STEM_A_4, SELF_SABOTAGE_STEM_A_5, SELF_SABOTAGE_STEM_A_6,
+	SELF_SABOTAGE_STEM_B_1, SELF_SABOTAGE_STEM_B_2, SELF_SABOTAGE_STEM_B_3, SELF_SABOTAGE_STEM_B_4, SELF_SABOTAGE_STEM_B_5, SELF_SABOTAGE_STEM_B_6,
+	WAKING_UP_STEM_A_1, WAKING_UP_STEM_A_2, WAKING_UP_STEM_A_3, WAKING_UP_STEM_A_4, WAKING_UP_STEM_A_5, WAKING_UP_STEM_A_6,
+	WAKING_UP_STEM_B_1, WAKING_UP_STEM_B_2, WAKING_UP_STEM_B_3, WAKING_UP_STEM_B_4, WAKING_UP_STEM_B_5, WAKING_UP_STEM_B_6,
+	SELF_ACCEPTANCE_STEM_A_1, SELF_ACCEPTANCE_STEM_A_2, SELF_ACCEPTANCE_STEM_A_3, SELF_ACCEPTANCE_STEM_A_4, SELF_ACCEPTANCE_STEM_A_5, SELF_ACCEPTANCE_STEM_A_6,
+	SELF_ACCEPTANCE_STEM_B_1, SELF_ACCEPTANCE_STEM_B_2, SELF_ACCEPTANCE_STEM_B_3, SELF_ACCEPTANCE_STEM_B_4, SELF_ACCEPTANCE_STEM_B_5, SELF_ACCEPTANCE_STEM_B_6,
+	HIGHER_SELF_STEM_A_1, HIGHER_SELF_STEM_A_2, HIGHER_SELF_STEM_A_3, HIGHER_SELF_STEM_A_4, HIGHER_SELF_STEM_A_5, HIGHER_SELF_STEM_A_6,
+	HIGHER_SELF_STEM_B_1, HIGHER_SELF_STEM_B_2, HIGHER_SELF_STEM_B_3, HIGHER_SELF_STEM_B_4, HIGHER_SELF_STEM_B_5, HIGHER_SELF_STEM_B_6,
+	TRIUMPH_OF_SE_STEM_A_1, TRIUMPH_OF_SE_STEM_A_2, TRIUMPH_OF_SE_STEM_A_3, TRIUMPH_OF_SE_STEM_A_4, TRIUMPH_OF_SE_STEM_A_5, TRIUMPH_OF_SE_STEM_A_6,
+	TRIUMPH_OF_SE_STEM_B_1, TRIUMPH_OF_SE_STEM_B_2, TRIUMPH_OF_SE_STEM_B_3, TRIUMPH_OF_SE_STEM_B_4, TRIUMPH_OF_SE_STEM_B_5, TRIUMPH_OF_SE_STEM_B_6
+]
+
 // Initialize Global Variables
 let leaf1;
 let leaf2;
@@ -866,12 +961,38 @@ const initializeSelfAcceptance = function() {
 	headerHTML.innerHTML = SELF_ACCEPTANCE_HEADER;
 	initializeTwoStartButtons();
 }
-//
+// Sage Self
 const initializeSageSelf = function() {
 	topicState = "sage-self";
-	loadStems(SAGE_SELF_STEM_1, SAGE_SELF_STEM_2, SAGE_SELF_STEM_3, SAGE_SELF_STEM_4, SAGE_SELF_STEM_5, SAGE_SELF_STEM_6);
+	clearPage();
 	headerHTML.innerHTML = SAGE_SELF_HEADER;
+	headerHTML.style.display = "block";
+	higherSelfButton.style.display = "block";
+	triumphOfSE_Button.style.display = "block";	
+}
+const initializeHigherSelf = function() {
+	topicState = "higher-self";
+	clearPage();
+	headerHTML.innerHTML = HIGHER_SELF_HEADER;
+	initializeTwoStartButtons();
+}
+const initializeTriumphOfSE = function() {
+	topicState = "triumph-of-se";
+	clearPage();
+	headerHTML.innerHTML = TRIUMPH_OF_SE_HEADER;
+	initializeTwoStartButtons();
+}
+//random
+const initializeRandom = function() {
+	pillarState = "random";
+	clearPage();
+	loadStems(getRandomStem(), getRandomStem(), getRandomStem(), getRandomStem(), getRandomStem(), getRandomStem());
+	headerHTML.innerHTML = RANDOM_HEADER;
 	initializeMoreStartPage();
+}
+const getRandomStem = function() {	
+	let randomNumber = Math.floor(Math.random()*NUMBER_OF_STEMS);	
+	return stemArray[randomNumber];
 }
 const clearPage = function() {
 	howToUseButton.style.display = "none";
@@ -918,7 +1039,9 @@ const clearPage = function() {
 	behaviorsTASE_Button.style.display = "none";
 	selfSabotageButton.style.display = "none";
 	wakingUpButton.style.display = "none";
-	selfAcceptanceButton.style.display = "none";
+	selfAcceptanceButton.style.display = "none";	
+	higherSelfButton.style.display = "none";
+	triumphOfSE_Button.style.display = "none";
 }
 const displayHowTo = function() {
 	howParagraph.style.display = "block";
@@ -1013,6 +1136,12 @@ const startExerciseA = function() {
 	else if(topicState === "self-acceptance") {
 		loadStems(SELF_ACCEPTANCE_STEM_A_1, SELF_ACCEPTANCE_STEM_A_2, SELF_ACCEPTANCE_STEM_A_3, SELF_ACCEPTANCE_STEM_A_4, SELF_ACCEPTANCE_STEM_A_5, SELF_ACCEPTANCE_STEM_A_6);
 	}
+	else if(topicState === "higher-self") {
+		loadStems(HIGHER_SELF_STEM_A_1, HIGHER_SELF_STEM_A_2, HIGHER_SELF_STEM_A_3, HIGHER_SELF_STEM_A_4, HIGHER_SELF_STEM_A_5, HIGHER_SELF_STEM_A_6);
+	}
+	else if(topicState === "triump-of-se") {
+		loadStems(TRIUMPH_OF_SE_STEM_A_1, TRIUMPH_OF_SE_STEM_A_2, TRIUMPH_OF_SE_STEM_A_3, TRIUMPH_OF_SE_STEM_A_4, TRIUMPH_OF_SE_STEM_A_5, TRIUMPH_OF_SE_STEM_A_6);
+	}
 	startExercise();
 }
 const startExerciseB = function() {	
@@ -1066,6 +1195,12 @@ const startExerciseB = function() {
 	}
 	else if(topicState === "self-acceptance") {
 		loadStems(SELF_ACCEPTANCE_STEM_B_1, SELF_ACCEPTANCE_STEM_B_2, SELF_ACCEPTANCE_STEM_B_3, SELF_ACCEPTANCE_STEM_B_4, SELF_ACCEPTANCE_STEM_B_5, SELF_ACCEPTANCE_STEM_B_6);
+	}
+	else if(topicState === "higher-self") {
+		loadStems(HIGHER_SELF_STEM_B_1, HIGHER_SELF_STEM_B_2, HIGHER_SELF_STEM_B_3, HIGHER_SELF_STEM_B_4, HIGHER_SELF_STEM_B_5, HIGHER_SELF_STEM_B_6);
+	}
+	else if(topicState === "triump-of-se") {
+		loadStems(TRIUMPH_OF_SE_STEM_B_1, TRIUMPH_OF_SE_STEM_B_2, TRIUMPH_OF_SE_STEM_B_3, TRIUMPH_OF_SE_STEM_B_4, TRIUMPH_OF_SE_STEM_B_5, TRIUMPH_OF_SE_STEM_B_6);
 	}
 	startExercise();
 }
@@ -1283,8 +1418,12 @@ behaviorsTASE_Button.addEventListener("click", initializeBehaviorsTASE);
 selfSabotageButton.addEventListener("click", initializeSelfSabotage);
 wakingUpButton.addEventListener("click", initializeWakingUp);
 selfAcceptanceButton.addEventListener("click", initializeSelfAcceptance);
-//
+// sage self
 sageSelfButton.addEventListener("click", initializeSageSelf);
+higherSelfButton.addEventListener("click", initializeHigherSelf);
+triumphOfSE_Button.addEventListener("click", initializeTriumphOfSE);
+// random
+randomButton.addEventListener("click", initializeRandom);
 //start buttons
 startButton.addEventListener("click", startExercise);
 startButtonA.addEventListener("click", startExerciseA);
