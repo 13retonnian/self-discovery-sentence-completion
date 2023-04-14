@@ -1139,7 +1139,7 @@ const startExerciseA = function() {
 	else if(topicState === "higher-self") {
 		loadStems(HIGHER_SELF_STEM_A_1, HIGHER_SELF_STEM_A_2, HIGHER_SELF_STEM_A_3, HIGHER_SELF_STEM_A_4, HIGHER_SELF_STEM_A_5, HIGHER_SELF_STEM_A_6);
 	}
-	else if(topicState === "triump-of-se") {
+	else if(topicState === "triumph-of-se") {
 		loadStems(TRIUMPH_OF_SE_STEM_A_1, TRIUMPH_OF_SE_STEM_A_2, TRIUMPH_OF_SE_STEM_A_3, TRIUMPH_OF_SE_STEM_A_4, TRIUMPH_OF_SE_STEM_A_5, TRIUMPH_OF_SE_STEM_A_6);
 	}
 	startExercise();
@@ -1199,7 +1199,7 @@ const startExerciseB = function() {
 	else if(topicState === "higher-self") {
 		loadStems(HIGHER_SELF_STEM_B_1, HIGHER_SELF_STEM_B_2, HIGHER_SELF_STEM_B_3, HIGHER_SELF_STEM_B_4, HIGHER_SELF_STEM_B_5, HIGHER_SELF_STEM_B_6);
 	}
-	else if(topicState === "triump-of-se") {
+	else if(topicState === "triumph-of-se") {
 		loadStems(TRIUMPH_OF_SE_STEM_B_1, TRIUMPH_OF_SE_STEM_B_2, TRIUMPH_OF_SE_STEM_B_3, TRIUMPH_OF_SE_STEM_B_4, TRIUMPH_OF_SE_STEM_B_5, TRIUMPH_OF_SE_STEM_B_6);
 	}
 	startExercise();
