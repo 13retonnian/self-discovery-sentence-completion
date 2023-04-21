@@ -8,7 +8,6 @@ const beginningButton = document.querySelector(".beginning-button");
 const motherButton = document.querySelector(".mother-button");
 const fatherButton = document.querySelector(".father-button");
 const anotherPerspectiveButton = document.querySelector(".another-perspective-button");
-const parentalTopics = document.querySelector(".parental-topics");
 // Child - Teenage Button
 const childTeenageButton = document.querySelector(".child-teenage-button");
 const childButton = document.querySelector(".child-button");
@@ -708,19 +707,21 @@ const loadStems = function(firstStem, secondStem, thirdStem, fourthStem, fifthSt
 	stem5 = fifthStem;
 	stem6 = sixthStem;
 }
-const initializeMoreStartPage = function () {
+const initializeOneStartButton = function () {
 	clearPage();
 	headerHTML.style.display = "block";
 	startButton.style.display = "block";
 	homeButton.style.display = "block";
 }
 const initializeTwoStartButtons = function() {
+	clearPage();
 	headerHTML.style.display = "block";
 	homeButton.style.display = "block";
 	startButtonA.style.display = "block";
 	startButtonB.style.display = "block";
 }
 const initializeThreeStartButtons = function() {	
+	clearPage();
 	headerHTML.style.display = "block";
 	homeButton.style.display = "block";
 	startButtonA.style.display = "block";
@@ -728,6 +729,7 @@ const initializeThreeStartButtons = function() {
 	startButtonC.style.display = "block";
 }
 const initializeFiveStartButtons = function() {
+	clearPage();
 	headerHTML.style.display = "block";
 	homeButton.style.display = "block";
 	startButtonA.style.display = "block";
@@ -740,190 +742,206 @@ const initializeIntroductory = function() {
 	topicState = "introductory";
 	loadStems(INTRODUCTORY_STEM_1, INTRODUCTORY_STEM_2, INTRODUCTORY_STEM_3, INTRODUCTORY_STEM_4, INTRODUCTORY_STEM_5, INTRODUCTORY_STEM_6);
 	headerHTML.innerHTML = INTRODUCTORY_HEADER;
-	initializeMoreStartPage();
+	initializeOneStartButton();
 }
 // Parental
-const initializeParental = function() {	
-	topicState = "parental";	
+const displayParentalButtons = function() {	
 	clearPage();
-	homeButton.style.display = "block";
-	headerHTML.style.display = "block";
-	headerHTML.innerHTML = PARENTAL_HEADER;
 	beginningButton.style.display = "block";
 	motherButton.style.display = "block";
 	fatherButton.style.display = "block";
 	anotherPerspectiveButton.style.display = "block";
+	homeButton.style.display = "block";	
+}
+const initializeParental = function() {	
+	topicState = "parental";		
+	displayParentalButtons();
+	headerHTML.innerHTML = PARENTAL_HEADER;	
+	headerHTML.style.display = "block";		
 }
 const initializeBeginning = function() {
 	topicState = "beginning";
 	loadStems(BEGINNING_STEM_1, BEGINNING_STEM_2, BEGINNING_STEM_3, BEGINNING_STEM_4, BEGINNING_STEM_5, BEGINNING_STEM_6);
 	headerHTML.innerHTML = BEGINNING_HEADER;	
-	initializeMoreStartPage();
+	initializeOneStartButton();
+	parentalButton.style.display = "block";
 }
 // Mother
 const initializeMother = function() {
-	topicState = "mother";
-	clearPage();
+	topicState = "mother";	
 	initializeThreeStartButtons();
-	headerHTML.innerHTML = MOTHER_HEADER;		
+	headerHTML.innerHTML = MOTHER_HEADER;	
+	parentalButton.style.display = "block";
 }
 const initializeFather = function() {
-	topicState = "father";
-	clearPage();
+	topicState = "father";	
 	initializeThreeStartButtons();	
-	headerHTML.innerHTML = FATHER_HEADER;		
+	headerHTML.innerHTML = FATHER_HEADER;	
+	parentalButton.style.display = "block";	
 }
 const initializeAnotherPerspective = function() {
 	topicState = "another-perspective";
 	loadStems(ANOTHER_PERSPECTIVE_STEM_1, ANOTHER_PERSPECTIVE_STEM_2, ANOTHER_PERSPECTIVE_STEM_3, ANOTHER_PERSPECTIVE_STEM_4, ANOTHER_PERSPECTIVE_STEM_5, ANOTHER_PERSPECTIVE_STEM_6);
 	headerHTML.innerHTML = ANOTHER_PERSPECTIVE;
-	initializeMoreStartPage();
+	initializeOneStartButton();
+	parentalButton.style.display = "block";
 }
 // Child - Teenage Self
-const initializeChildTeenage = function() {
-	topicState = "child-teenage";
+const displayChildTeenageButtons = function() {
 	clearPage();
-	homeButton.style.display = "block";
-	headerHTML.style.display = "block";
+	homeButton.style.display = "block";	
 	childButton.style.display = "block";
 	teenageButton.style.display = "block";
 	integrationButton.style.display = "block";	
-	headerHTML.innerHTML = CHILD_TEENAGE_HEADER;	
+}
+const initializeChildTeenage = function() {
+	topicState = "child-teenage";	
+	displayChildTeenageButtons();
+	headerHTML.innerHTML = CHILD_TEENAGE_HEADER;
+	headerHTML.style.display = "block";
 }
 const initializeChild = function() {
-	topicState = "child";
-	clearPage();
+	topicState = "child";	
 	initializeThreeStartButtons();	
+	childTeenageButton.style.display = "block";
 	headerHTML.innerHTML = CHILD_HEADER;
 }
 const initializeTeenage = function() {
-	topicState = "teenage";
-	clearPage();
+	topicState = "teenage";	
 	initializeThreeStartButtons();
+	childTeenageButton.style.display = "block";
 	headerHTML.innerHTML = TEENAGE_HEADER;
 }
 const initializeIntegration = function() {
 	topicState = "integration";
 	loadStems(INTEGRATION_STEM_1, INTEGRATION_STEM_2, INTEGRATION_STEM_3, INTEGRATION_STEM_4, INTEGRATION_STEM_5, INTEGRATION_STEM_6);
-	headerHTML.innerHTML = INTEGRATION_HEADER;
-	initializeMoreStartPage();
+	headerHTML.innerHTML = INTEGRATION_HEADER;	
+	initializeOneStartButton();
+	childTeenageButton.style.display = "block";
 }
 // Negative Feelings
-const initializeNegative = function() {
-	topicState = "negative";
+const displayNegativeButtons = function() {
 	clearPage();
-	homeButton.style.display = "block";
-	headerHTML.style.display = "block";
+	homeButton.style.display = "block";	
 	painButton.style.display = "block";
 	angerButton.style.display = "block";
 	fearButton.style.display = "block";
 	envyButton.style.display = "block";
+}
+const initializeNegative = function() {
+	topicState = "negative";	
+	displayNegativeButtons();
+	headerHTML.style.display = "block";
 	headerHTML.innerHTML = NEGATIVE_HEADER;	
 }
 const initializePain = function() {
-	topicState = "pain";
-	clearPage();
+	topicState = "pain";	
 	initializeTwoStartButtons();
 	headerHTML.innerHTML = PAIN_HEADER;
+	negativeButton.style.display = "block";
 }
 const initializeAnger = function() {
-	topicState = "anger";
-	clearPage();
+	topicState = "anger";	
 	initializeTwoStartButtons();
 	headerHTML.innerHTML = ANGER_HEADER;
+	negativeButton.style.display = "block";
 }
 const initializeFear = function() {
-	topicState = "fear";
-	clearPage();
+	topicState = "fear";	
 	initializeTwoStartButtons();
 	headerHTML.innerHTML = FEAR_HEADER;
+	negativeButton.style.display = "block";
 }
 const initializeEnvy = function() {
 	topicState = "envy";
-	initializeMoreStartPage();
+	initializeOneStartButton();
 	loadStems(ENVY_STEM_1, ENVY_STEM_2, ENVY_STEM_3, ENVY_STEM_4, ENVY_STEM_5, ENVY_STEM_6);
+	negativeButton.style.display = "block";
 }
 // Positive Emotions
-const initializePositive = function() {
-	topicState = "positive";
-	clearPage();
-	homeButton.style.display = "block";
-	headerHTML.style.display = "block";
+const displayPositiveButtons = function() {
+	clearPage();	
+	homeButton.style.display = "block";	
 	happinessButton.style.display = "block";
 	loveButton.style.display = "block";
 	feelingLovedButton.style.display = "block";
 	excitementButton.style.display = "block";
+}
+const initializePositive = function() {
+	topicState = "positive";	
+	displayPositiveButtons();
+	headerHTML.style.display = "block";
 	headerHTML.innerHTML = POSITIVE_HEADER;
 }
 const initializeHappiness = function() {
-	topicState = "happiness";
-	clearPage();
+	topicState = "happiness";	
 	initializeTwoStartButtons();
 	headerHTML.innerHTML = HAPPINESS_HEADER;
+	positiveButton.style.display = "block";
 }
 const initializeLove = function(){
-	topicState = "love";
-	clearPage();
+	topicState = "love";	
 	initializeTwoStartButtons();
 	headerHTML.innerHTML = LOVE_HEADER;
+	positiveButton.style.display = "block";
 }
 const initializeFeelingLoved = function() {
-	topicState = "feeling-loved";
-	clearPage();
+	topicState = "feeling-loved";	
 	initializeTwoStartButtons();
+	positiveButton.style.display = "block";
 	headerHTML.innerHTML = FEELING_LOVED_HEADER;
 }
 const initializeExcitement = function() {
-	topicState = "excitement";
-	clearPage();
+	topicState = "excitement";	
 	initializeTwoStartButtons();
 	headerHTML.innerHTML = EXCITEMENT_HEADER;
+	positiveButton.style.display = "block";
 }
 // Sexuality
-const initializeExploringSexuality = function() {
-	topicState = "experiencing-sexuality";
+const displaySexualityButtons = function() {
 	clearPage();
 	homeButton.style.display = "block";
-	headerHTML.style.display = "block";
-	headerHTML.innerHTML = EXPLORING_SEXUALITY_HEADER;
 	sexualityButton.style.display = "block";
 	parentalInfluencesButton.style.display = "block";
 	oppositeSexButton.style.display = "block";
 	sexAndSpiritButton.style.display = "block";
 }
+const initializeExploringSexuality = function() {
+	topicState = "experiencing-sexuality";	
+	displaySexualityButtons();
+	headerHTML.style.display = "block";
+	headerHTML.innerHTML = EXPLORING_SEXUALITY_HEADER;	
+}
 const initializeSexuality = function() {
-	topicState = "sexuality";
-	clearPage();
+	topicState = "sexuality";	
 	loadStems(SEXUALITY_STEM_1, SEXUALITY_STEM_2, SEXUALITY_STEM_3, SEXUALITY_STEM_4, SEXUALITY_STEM_5, SEXUALITY_STEM_6);
 	headerHTML.innerHTML = SEXUALITY_HEADER;
-	initializeMoreStartPage();
+	initializeOneStartButton();
+	exploringSexualityButton.style.display = "block";
 }
 const initializeParentalInfluences = function() {
-	topicState = "parental-influences";
-	clearPage();
+	topicState = "parental-influences";	
 	headerHTML.innerHTML = PARENTAL_INFLUENCES_HEADER;
 	initializeFiveStartButtons();
+	exploringSexualityButton.style.display = "block";
 }
 const initializeOppositeSex = function() {
-	topicState = "opposite-sex";
-	clearPage();
+	topicState = "opposite-sex";	
 	headerHTML.innerHTML = OPPOSITE_SEX_HEADER;
 	loadStems(OPPOSITE_SEX_STEM_1, OPPOSITE_SEX_STEM_2, OPPOSITE_SEX_STEM_3, OPPOSITE_SEX_STEM_4, OPPOSITE_SEX_STEM_5, OPPOSITE_SEX_STEM_6);
-	initializeMoreStartPage();
+	initializeOneStartButton();
+	exploringSexualityButton.style.display = "block";
 }
 const initializeSexAndSpirit = function() {
-	topicState = "sex-and-spirit";
-	clearPage();
+	topicState = "sex-and-spirit";	
 	headerHTML.innerHTML = SEX_AND_SPIRIT_HEADER;
 	loadStems(SEX_AND_SPIRIT_STEM_1, SEX_AND_SPIRIT_STEM_2, SEX_AND_SPIRIT_STEM_3, SEX_AND_SPIRIT_STEM_4, SEX_AND_SPIRIT_STEM_5, SEX_AND_SPIRIT_STEM_6);
-	initializeMoreStartPage();
+	initializeOneStartButton();
+	exploringSexualityButton.style.display = "block";
 }
 // Self Esteem
-const initializeSelfEsteem = function() {
-	topicState = "self-esteem";
+const displaySelfEsteemButtons = function() {
 	clearPage();
-	headerHTML.innerHTML = SELF_ESTEEM_HEADER;
-	headerHTML.style.display = "block";
 	homeButton.style.display = "block";
 	earlyMessagesButton.style.display = "block";
 	behaviorsTASE_Button.style.display = "block";
@@ -931,56 +949,66 @@ const initializeSelfEsteem = function() {
 	wakingUpButton.style.display = "block";
 	selfAcceptanceButton.style.display = "block";
 }
+const initializeSelfEsteem = function() {
+	topicState = "self-esteem";	
+	headerHTML.innerHTML = SELF_ESTEEM_HEADER;
+	headerHTML.style.display = "block";
+	displaySelfEsteemButtons();
+}
 const initializeEarlyMessages = function() {
-	topicState = "early-messages";
-	clearPage();
+	topicState = "early-messages";	
 	headerHTML.innerHTML = EARLY_MESSAGES_HEADER;
 	initializeTwoStartButtons();
+	selfEsteemButton.style.display = "block";
 }
 const initializeBehaviorsTASE = function() {
-	topicState = "behaviors-tase";
-	clearPage();
+	topicState = "behaviors-tase";	
 	headerHTML.innerHTML = BEHAVIORS_T_A_S_E_HEADER;
 	initializeTwoStartButtons();
+	selfEsteemButton.style.display = "block";
 }
 const initializeSelfSabotage = function() {
-	topicState = "self-sabotage";
-	clearPage();
+	topicState = "self-sabotage";	
 	headerHTML.innerHTML = SELF_SABOTAGE_HEADER;
 	initializeTwoStartButtons();
+	selfEsteemButton.style.display = "block";
 }
 const initializeWakingUp = function() {
-	topicState = "waking-up";
-	clearPage();
+	topicState = "waking-up";	
 	headerHTML.innerHTML = WAKING_UP_HEADER;
 	initializeTwoStartButtons();
+	selfEsteemButton.style.display = "block";
 }
 const initializeSelfAcceptance = function() {
-	topicState = "self-acceptance";
-	clearPage();
+	topicState = "self-acceptance";	
 	headerHTML.innerHTML = SELF_ACCEPTANCE_HEADER;
 	initializeTwoStartButtons();
+	selfEsteemButton.style.display = "block";
 }
 // Sage Self
-const initializeSageSelf = function() {
-	topicState = "sage-self";
+const displaySageSelfButtons = function() {
 	clearPage();
-	headerHTML.innerHTML = SAGE_SELF_HEADER;
-	headerHTML.style.display = "block";
 	higherSelfButton.style.display = "block";
-	triumphOfSE_Button.style.display = "block";	
+	triumphOfSE_Button.style.display = "block";
+	homeButton.style.display = "block";
+}
+const initializeSageSelf = function() {
+	topicState = "sage-self";	
+	displaySageSelfButtons();
+	headerHTML.innerHTML = SAGE_SELF_HEADER;
+	headerHTML.style.display = "block";	
 }
 const initializeHigherSelf = function() {
-	topicState = "higher-self";
-	clearPage();
+	topicState = "higher-self";	
 	headerHTML.innerHTML = HIGHER_SELF_HEADER;
 	initializeTwoStartButtons();
+	sageSelfButton.style.display = "block";
 }
 const initializeTriumphOfSE = function() {
-	topicState = "triumph-of-se";
-	clearPage();
+	topicState = "triumph-of-se";	
 	headerHTML.innerHTML = TRIUMPH_OF_SE_HEADER;
 	initializeTwoStartButtons();
+	sageSelfButton.style.display = "block";
 }
 //random
 const initializeRandom = function() {
@@ -988,7 +1016,7 @@ const initializeRandom = function() {
 	clearPage();
 	loadStems(getRandomStem(), getRandomStem(), getRandomStem(), getRandomStem(), getRandomStem(), getRandomStem());
 	headerHTML.innerHTML = RANDOM_HEADER;
-	initializeMoreStartPage();
+	initializeOneStartButton();
 }
 const getRandomStem = function() {	
 	let randomNumber = Math.floor(Math.random()*NUMBER_OF_STEMS);	
@@ -997,8 +1025,7 @@ const getRandomStem = function() {
 const clearPage = function() {
 	howToUseButton.style.display = "none";
 	howParagraph.style.display = "none";
-	homeButton.style.display = "none";
-	topics.style.display = "none";
+	homeButton.style.display = "none";	
 	startButton.style.display = "none";
 	startButtonA.style.display = "none";
 	startButtonB.style.display = "none";
@@ -1042,15 +1069,36 @@ const clearPage = function() {
 	selfAcceptanceButton.style.display = "none";	
 	higherSelfButton.style.display = "none";
 	triumphOfSE_Button.style.display = "none";
+	//frontpage topic buttons
+	introductoryButton.style.display = "none";
+	parentalButton.style.display = "none";
+	childTeenageButton.style.display = "none";
+	negativeButton.style.display = "none";
+	positiveButton.style.display = "none";
+	exploringSexualityButton.style.display = "none";	
+	selfEsteemButton.style.display = "none";
+	sageSelfButton.style.display = "none";
+	randomButton.style.display = "none";	
 }
 const displayHowTo = function() {
 	howParagraph.style.display = "block";
 	homeButton.style.display = "block";
 	topics.style.display = "none";
 }
+const displayHomePageTopics = function() {
+	introductoryButton.style.display = "block";
+	parentalButton.style.display = "block";
+	childTeenageButton.style.display = "block";
+	negativeButton.style.display = "block";
+	positiveButton.style.display = "block";
+	exploringSexualityButton.style.display = "block";	
+	selfEsteemButton.style.display = "block";
+	sageSelfButton.style.display = "block";
+	randomButton.style.display = "block";
+}
 const displayHomePage = ()=>{
 	howToUseButton.style.display = "block";
-	topics.style.display = "flex";
+	displayHomePageTopics();
 	frontPageHeader.style.display = "block";
 }
 const startTimer = function() {
@@ -1286,18 +1334,125 @@ const resetValuesAtCompletion = function() {
 	timeLeft = 60;
 	timerHTML.innerHTML = "60";
 	pillarIndex = 1;	
+	topicState = "";
+}
+const displayTopicButton = function () {
+	//parental influences
+	if(topicState === "beginning") {
+		parentalButton.style.display = "block";
+	}
+	else if(topicState === "mother") {
+		motherButton.style.display = "block";
+		parentalButton.style.display = "block";
+	}
+	else if(topicState === "father") {
+		fatherButton.style.display = "block";
+		parentalButton.style.display = "block";
+	}
+	else if(topicState === "another-perspective") {
+		parentalButton.style.display = "block";
+	}
+	//child teenage
+	else if(topicState === "child") {
+		childButton.style.display = "block";
+		childTeenageButton.style.display = "block";
+	}
+	else if(topicState === "teenage") {
+		teenageButton.style.display = "block";
+		childTeenageButton.style.display = "block";
+	}
+	else if(topicState === "integration") {
+		childTeenageButton.style.display = "block";
+	}
+	//negative
+	else if(topicState === "pain") {
+		painButton.style.display = "block";
+		negativeButton.style.display = "block";
+	}
+	else if(topicState === "anger") {
+		angerButton.style.display = "block";
+		negativeButton.style.display = "block";
+	}
+	else if(topicState === "fear") {
+		fearButton.style.display = "block";
+		negativeButton.style.display = "block";
+	}	
+	else if(topicState === "envy") {		
+		negativeButton.style.display = "block";
+	}
+	//positive
+	else if(topicState === "happiness") {
+		positiveButton.style.display = "block";
+		happinessButton.style.display = "block";
+	}
+	else if(topicState === "love") {
+		positiveButton.style.display = "block";
+		loveButton.style.display = "block";
+	}
+	else if(topicState === "feeling-loved") {
+		positiveButton.style.display = "block";
+		feelingLovedButton.style.display = "block";
+	}
+	else if(topicState === "excitement") {
+		positiveButton.style.display = "block";
+		excitementButton.style.display = "block";
+	}
+	//exploring sexuality
+	else if(topicState === "sexuality") {
+		exploringSexualityButton.style.display = "block";
+	}
+	else if(topicState === "parental-influences") {
+		exploringSexualityButton.style.display = "block";
+		parentalInfluencesButton.style.display = "block";
+	}
+	else if(topicState === "opposite-sex") {
+		exploringSexualityButton.style.display = "block";		
+	}
+	else if(topicState === "sex-and-spirit") {
+		exploringSexualityButton.style.display = "block";		
+	}
+	//self-esteem
+	else if(topicState === "early-messages") {
+		selfEsteemButton.style.display = "block";
+		earlyMessagesButton.style.display = "block";
+	}
+	else if(topicState === "behaviors-tase") {
+		selfEsteemButton.style.display = "block";
+		behaviorsTASE_Button.style.display = "block";
+	}
+	else if(topicState === "self-sabotage") {
+		selfEsteemButton.style.display = "block";
+		selfSabotageButton.style.display = "block";
+	}
+	else if(topicState === "waking-up") {
+		selfEsteemButton.style.display = "block";
+		wakingUpButton.style.display = "block";
+	}
+	else if(topicState === "self-acceptance") {
+		selfEsteemButton.style.display = "block";
+		selfAcceptanceButton.style.display = "block";
+	}
+	//sage-self
+	else if(topicState === "higher-self") {
+		sageSelfButton.style.display = "block";
+		higherSelfButton.style.display = "block";
+	}
+	else if(topicState === "triumph-of-se") {
+		sageSelfButton.style.display = "block";
+		triumphOfSE_Button.style.display = "block";
+	}
 }
 const exerciseComplete = function() {
 	saveCurrentLeaf();	
 	stopTimer();	
-	resetPauseButton();
-	resetValuesAtCompletion();
+	resetPauseButton();	
 	clearPage();
 	displayResults();	
-	topicState = "";
 	homeButton.style.display = "block";
+	displayTopicButton();
 	saveButton.style.display = "block";
 	resultsHeader.style.display = "block";
+	resetValuesAtCompletion();
 }
 const goToNextStem = function() {
 	saveCurrentLeaf();
