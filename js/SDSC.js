@@ -69,19 +69,7 @@ const resultsHeader = document.querySelector(".results-header");
 const savedIndicator = document.querySelector(".saved-indicator");
 //constants
 const NUMBER_OF_STEMS = 318;
-const NUMBER_OF_INTRODUCTORY_STEMS = 6;
-// Parental
-const NUMBER_OF_BEGINNING_STEMS = 6;
-const NUMBER_OF_MOTHER_STEMS = 6;
-// Child-Teenage
-const NUMBER_OF_CHILD_TEENAGE_STEMS = 6;
-const NUMBER_OF_NEGATIVE_STEMS = 6;
-const NUMBER_OF_POSITIVE_STEMS = 6;
-const NUMBER_OF_SEXUALITY_STEMS = 6;
-const NUMBER_OF_SELF_ESTEEM_STEMS = 6;
-const NUMBER_OF_SAGE_SELF_STEMS = 6;
 // Headers
-let noBoxHeader;
 const FRONT_PAGE_HEADER = "Choose a pillar:";
 const QUICK_INSTRUCTION_HEADER = "Quickly write as many endings to this sentence stem as you can before the timer runs out, or click next.";
 const RESULTS_HEADER = "Here are your results:";
@@ -1081,9 +1069,9 @@ const clearPage = function() {
 	randomButton.style.display = "none";	
 }
 const displayHowTo = function() {
+	clearPage();
 	howParagraph.style.display = "block";
-	homeButton.style.display = "block";
-	topics.style.display = "none";
+	homeButton.style.display = "block";	
 }
 const displayHomePageTopics = function() {
 	introductoryButton.style.display = "block";
