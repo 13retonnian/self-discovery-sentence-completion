@@ -951,9 +951,9 @@ const displaySelfEsteemButtons = function() {
 }
 const initializeSelfEsteem = function() {
 	topicState = "self-esteem";	
-	headerHTML.innerHTML = SELF_ESTEEM_HEADER;
-	headerHTML.style.display = "block";
 	displaySelfEsteemButtons();
+	headerHTML.innerHTML = SELF_ESTEEM_HEADER;
+	headerHTML.style.display = "block";	
 }
 const initializeEarlyMessages = function() {
 	topicState = "early-messages";	
